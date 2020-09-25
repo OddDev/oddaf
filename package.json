@@ -1,0 +1,30 @@
+{
+  "name": "odd.af",
+  "version": "0.0.1",
+  "description": "Personal portfolio website of OddDev",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OddDev/oddaf.git"
+  },
+  "keywords": [
+    "personal",
+    "website",
+    "portfolio",
+    "odd",
+    "af"
+  ],
+  "author": "kai@odd.af",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OddDev/oddaf/issues"
+  },
+  "homepage": "https://github.com/OddDev/oddaf#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
