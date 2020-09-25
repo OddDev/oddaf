@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/OddDev/oddaf/issues"
   },
-  "homepage": "https://github.com/OddDev/oddaf#readme",
+  "homepage": "https://odd.af",
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
   }
