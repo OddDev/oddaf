@@ -25,8 +25,9 @@ body {
     transform-origin: 1.2em center;
     transform: rotate(180deg);
     animation-name: social-media-link-rotation;
-    animation-duration: 4s;
+    animation-duration: 3s;
     transition: transform 1s;
+    will-change: transform;
     &__image {
         height: 2em;
         width: 2em;
