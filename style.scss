@@ -10,7 +10,7 @@ body {
 }
 
 .social-media {
-  position: absolute;
+  position: fixed;
   top: 0;
 }
 
@@ -27,6 +27,9 @@ body {
   animation-duration: 3s;
   transition: transform 1s;
   will-change: transform;
+  &--gap {
+    margin-top: 1.8em;
+  }
   &__image {
     height: 2em;
     width: 2em;
@@ -37,14 +40,6 @@ body {
     img {
       height: 100%;
       transform: rotate(180deg);
-    }
-  }
-  &__anchor {
-    &:link {
-      color: $odd-red;
-    }
-    &:visited {
-      color: $odd-grey;
     }
   }
   &__label {
@@ -80,6 +75,29 @@ body {
   &_headline {
     margin-left: 3.3em;
   }
+}
+
+.personal-information {
+  background-color: $odd-beige;
+  position: absolute;
+  padding: 0 2em 3em 2em;
+  text-align: center;
+}
+
+.link {
+  &:link {
+    color: $odd-red;
+  }
+  &:visited {
+    color: $odd-grey;
+  }
+  &--cta {
+    font-size: 1.2em;
+  }
+}
+
+.paragraph {
+  text-align: left;
 }
 
 @keyframes social-media-link-rotation {
