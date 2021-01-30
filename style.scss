@@ -84,6 +84,21 @@ body {
   text-align: center;
 }
 
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: "";
+  padding: 0;
+  &__item {
+    font-size: 0.8em;
+    background-color: $odd-grey;
+    color: $odd-beige;
+    padding: 0.2em 0.5em;
+    margin: 0.2em;
+    border-radius: 5px;
+  }
+}
+
 .link {
   &:link {
     color: $odd-red;
