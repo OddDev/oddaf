@@ -4,84 +4,87 @@ $odd-beige: #fbfbf8;
 $odd-grey: #474747;
 
 body {
-    margin: 0;
-    font-family: "Inconsolata", monospace;
-    color: $odd-grey;
+  margin: 0;
+  font-family: "Inconsolata", monospace;
+  color: $odd-grey;
 }
 
 .social-media {
-    position: absolute;
-    top: 0;
+  position: absolute;
+  top: 0;
 }
 
 .social-media-link {
-    background-color: $odd-beige;
-    border-radius: 1px;
-    border-right: solid $odd-red;
-    display: flex;
-    align-items: center;
+  background-color: $odd-beige;
+  border-radius: 1px;
+  border-right: solid $odd-red;
+  display: flex;
+  align-items: center;
+  margin-top: 0.2em;
+  transform-origin: 1.2em center;
+  transform: rotate(180deg);
+  animation-name: social-media-link-rotation;
+  animation-duration: 3s;
+  transition: transform 1s;
+  will-change: transform;
+  &__image {
+    height: 2em;
+    width: 2em;
+    margin: 0.2em;
+    border-radius: 50%;
+    background-color: $odd-red;
+    overflow: hidden;
+    img {
+      height: 100%;
+      transform: rotate(180deg);
+    }
+  }
+  &__anchor {
     color: $odd-red;
-    margin-top: 0.2em;
-    transform-origin: 1.2em center;
-    transform: rotate(180deg);
-    animation-name: social-media-link-rotation;
-    animation-duration: 3s;
-    transition: transform 1s;
-    will-change: transform;
-    &__image {
-        height: 2em;
-        width: 2em;
-        margin: 0.2em;
-        border-radius: 50%;
-        background-color: $odd-red;
-        overflow: hidden;
-        img {
-            height: 100%;
-            transform: rotate(180deg);
-        }
-    }
-    &__label {
-        margin: 0 0.4em 0 0.4em;
-    }
-    &:hover {
-        transform: rotate(0deg);
-    }
+    text-decoration: none;
+  }
+  &__label {
+    margin: 0 0.4em 0 0.4em;
+  }
+  &:hover {
+    transform: rotate(0deg);
+  }
 }
 
 .background-image {
-    position: relative;
-    height: 100vh;
-    &__picture {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+  position: relative;
+  height: 100vh;
+  &__picture {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .greeting {
-    position: absolute;
-    background-color: $odd-beige;
-    bottom: 0;
-    width: 100%;
-    border-top: 0.2em solid $odd-red;
-    padding-top: 1em;
-    &__sub {
-        margin-left: 3em;
-    }
-    &_headline {
-        margin-left: 3.3em;
-    }
+  position: absolute;
+  background-color: $odd-beige;
+  bottom: 0;
+  width: 100%;
+  border-top: 0.2em solid $odd-red;
+  padding-top: 1em;
+  &__sub {
+    margin-left: 3em;
+  }
+  &_headline {
+    margin-left: 3.3em;
+  }
 }
 
 @keyframes social-media-link-rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    75% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(180deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
 }
