@@ -40,10 +40,15 @@ body {
     }
   }
   &__anchor {
-    color: $odd-red;
-    text-decoration: none;
+    &:link {
+      color: $odd-red;
+    }
+    &:visited {
+      color: $odd-grey;
+    }
   }
   &__label {
+    color: $odd-red;
     margin: 0 0.4em 0 0.4em;
   }
   &:hover {
