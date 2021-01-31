@@ -110,9 +110,11 @@ body {
   &:visited {
     color: $odd-grey;
   }
-  &--cta {
-    font-size: 1.2em;
-  }
+}
+
+.cta {
+  text-align: center;
+  margin-top: 2em;
 }
 
 @keyframes social-media-link-rotation {
