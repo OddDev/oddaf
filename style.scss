@@ -52,18 +52,26 @@ body {
 }
 
 .content {
-  background-color: $odd-beige;
   .greeting {
     display: flex;
     flex-direction: column;
     height: 100vh;
     &__spacer {
       flex: 1;
-      background-image: url(assets/profile-picture/360x740.jpg);
-      background-attachment: fixed;
-      background-size: cover;
+      &::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        height: 100vh;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background-size: cover;
+        background-image: url(assets/profile-picture/360x740.jpg);
+      }
     }
     &__headline {
+      background-color: $odd-beige;
       border-top: 0.2em solid $odd-red;
       padding-top: 1em;
       &--sub {
@@ -75,7 +83,9 @@ body {
     }
   }
   .personal-information {
+    background-color: $odd-beige;
     padding: 0 2em 3em 2em;
+    display: inline-block;
   }
   .interests {
     display: flex;
