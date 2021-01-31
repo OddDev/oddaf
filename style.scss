@@ -7,7 +7,6 @@ body {
   margin: 0;
   font-family: "Inconsolata", monospace;
   color: $odd-grey;
-  overscroll-behavior: none;
 }
 
 .social-media {
@@ -52,51 +51,45 @@ body {
   }
 }
 
-.background-image {
-  position: relative;
-  height: 100vh;
-  &__picture {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-.greeting {
-  position: absolute;
+.content {
   background-color: $odd-beige;
-  bottom: 0;
-  width: 100%;
-  border-top: 0.2em solid $odd-red;
-  padding-top: 1em;
-  &__sub {
-    margin-left: 3em;
+  .greeting {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    &__spacer {
+      flex: 1;
+      background-image: url(assets/profile-picture/360x740.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    &__headline {
+      border-top: 0.2em solid $odd-red;
+      padding-top: 1em;
+      &--sub {
+        margin-left: 3em;
+      }
+      &--big {
+        margin-left: 3.3em;
+      }
+    }
   }
-  &_headline {
-    margin-left: 3.3em;
+  .personal-information {
+    padding: 0 2em 3em 2em;
   }
-}
-
-.personal-information {
-  background-color: $odd-beige;
-  position: absolute;
-  padding: 0 2em 3em 2em;
-  text-align: center;
-}
-
-.interests {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  padding: 0;
-  &__item {
-    font-size: 0.8em;
-    background-color: $odd-grey;
-    color: $odd-beige;
-    padding: 0.2em 0.5em;
-    margin: 0.2em;
-    border-radius: 5px;
+  .interests {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    &__item {
+      font-size: 0.8em;
+      background-color: $odd-grey;
+      color: $odd-beige;
+      padding: 0.2em 0.5em;
+      margin: 0.2em;
+      border-radius: 5px;
+    }
   }
 }
 
@@ -110,10 +103,6 @@ body {
   &--cta {
     font-size: 1.2em;
   }
-}
-
-.paragraph {
-  text-align: left;
 }
 
 @keyframes social-media-link-rotation {
