@@ -70,7 +70,8 @@ body {
         right: 0;
         z-index: -1;
         background-size: cover;
-        background-image: url(assets/profile-picture/360x740.jpg);
+        // background-image: url(assets/profile-picture/360x740.jpg);
+        background-color: pink;
       }
     }
     &__headline {
