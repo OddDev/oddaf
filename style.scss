@@ -67,6 +67,7 @@ body {
   height: 100%;
   position: relative;
   overflow: hidden;
+  pointer-events: none;
   &__image {
     width: 100%;
     position: fixed;
