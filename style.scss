@@ -3,6 +3,12 @@ $odd-red: #e83f6f;
 $odd-beige: #fbfbf8;
 $odd-grey: #474747;
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Inconsolata", monospace;
@@ -52,58 +58,57 @@ body {
 }
 
 .content {
-  .greeting {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    animation-name: shove-content;
-    animation-duration: 2s;
-    animation-delay: 500ms;
-    &__spacer {
-      flex: 1;
-      &::after {
-        content: "";
-        position: fixed;
-        top: 0;
-        height: 100%;
-        left: 0;
-        right: 0;
-        z-index: -1;
-        background-size: cover;
-        // background-image: url(assets/profile-picture/360x740.jpg);
-        background-color: pink;
-      }
-    }
-    &__headline {
-      background-color: $odd-beige;
-      border-top: 0.2em solid $odd-red;
-      padding-top: 1em;
-      &--sub {
-        margin-left: 3em;
-      }
-      &--big {
-        margin-left: 3.3em;
-      }
-    }
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.splash {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  &__image {
+    height: 100%;
+    position: fixed;
+    object-fit: cover;
+    z-index: -1;
   }
-  .personal-information {
+  &__greeting {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: $odd-beige;
-    padding: 0 2em 3em 2em;
-    display: inline-block;
-  }
-  .interests {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding: 0;
-    &__item {
-      font-size: 0.8em;
-      background-color: $odd-grey;
-      color: $odd-beige;
-      padding: 0.2em 0.5em;
-      margin: 0.2em;
-      border-radius: 5px;
+    border-top: 0.2em solid $odd-red;
+    padding-top: 1em;
+    &--sub {
+      margin-left: 3em;
     }
+    &--big {
+      margin-left: 3.3em;
+    }
+  }
+}
+
+.personal-information {
+  background-color: $odd-beige;
+  padding: 0 2em 3em 2em;
+  display: inline-block;
+  position: relative;
+}
+
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+  &__item {
+    font-size: 0.8em;
+    background-color: $odd-grey;
+    color: $odd-beige;
+    padding: 0.2em 0.5em;
+    margin: 0.2em;
+    border-radius: 5px;
   }
 }
 
@@ -130,17 +135,5 @@ body {
   }
   100% {
     transform: rotate(180deg);
-  }
-}
-
-@keyframes shove-content {
-  0% {
-    height: 100vh;
-  }
-  50% {
-    height: 50vh;
-  }
-  100% {
-    height: 100vh;
   }
 }
