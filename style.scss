@@ -60,6 +60,14 @@ body {
 .content {
   height: 100%;
   overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.scroll-indicator {
+  position: fixed;
+  left: 0.3em;
+  bottom: 0.3em;
+  animation: 1s indicate-scroll linear alternate infinite;
 }
 
 .splash {
@@ -120,6 +128,15 @@ body {
   &:visited {
     color: $odd-grey;
   }
+  &--perma {
+    text-decoration: none;
+    &:link {
+      color: $odd-grey;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .cta {
@@ -136,5 +153,14 @@ body {
   }
   100% {
     transform: rotate(180deg);
+  }
+}
+
+@keyframes indicate-scroll {
+  from {
+    bottom: 0.3em;
+  }
+  to {
+    bottom: 1em;
   }
 }
