@@ -52,6 +52,7 @@ body {
     color: $odd-red;
     margin: 0 0.4em 0 0.4em;
   }
+  &:focus-within,
   &:hover {
     transform: rotate(0deg);
   }
