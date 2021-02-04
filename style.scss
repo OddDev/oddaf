@@ -62,6 +62,10 @@ body {
   height: 100%;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  @media (orientation: landscape) {
+    height: auto;
+    display: flex;
+  }
 }
 
 .scroll-indicator {
@@ -69,6 +73,9 @@ body {
   left: 0.3em;
   bottom: 0.3em;
   animation: 1s indicate-scroll linear alternate infinite;
+  @media (orientation: landscape) {
+    display: none;
+  }
 }
 
 .splash {
@@ -82,6 +89,10 @@ body {
     position: fixed;
     object-fit: cover;
     z-index: -1;
+    @media (orientation: landscape) {
+      // Two flex items equally split === 50%
+      max-width: 50%;
+    }
   }
   &__greeting {
     position: absolute;
@@ -96,6 +107,12 @@ body {
     &--big {
       margin-left: 3.3em;
     }
+    @media (orientation: landscape) {
+      position: fixed;
+    }
+  }
+  @media (orientation: landscape) {
+    flex: 1;
   }
 }
 
@@ -104,6 +121,9 @@ body {
   padding: 0 2em 3em 2em;
   display: inline-block;
   position: relative;
+  @media (orientation: landscape) {
+    flex: 1;
+  }
 }
 
 .interests {

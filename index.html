@@ -197,12 +197,18 @@
     </header>
     <main class="content" tabindex="-1">
       <div class="splash">
-        <img
-          aria-label="A picture of Kai Klostermann serving as a full width, full height splash image"
-          class="splash__image"
-          src="/assets/profile-picture/360x740.jpg"
-          alt="Potrait of Kai Klostermann in the background as a splash image"
-        />
+        <picture>
+          <source
+            srcset="/assets/profile-picture/370x360.jpg"
+            media="(orientation: landscape)"
+          />
+          <img
+            aria-label="A picture of Kai Klostermann serving as a full width, full height splash image"
+            class="splash__image"
+            src="/assets/profile-picture/360x740.jpg"
+            alt="Potrait of Kai Klostermann in the background as a splash image"
+          />
+        </picture>
         <div class="splash__greeting">
           <span class="splash__greeting--sub">Hello, I'm</span>
           <h2 class="splash__greeting--big">Kai Klostermann</h2>
