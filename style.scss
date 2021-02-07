@@ -94,12 +94,25 @@ body {
       max-width: 50%;
     }
   }
-  .egg {
+  &__egg {
     position: fixed;
     background-color: $odd-red;
     height: 5em;
     width: 100%;
     bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &-claim {
+      color: $odd-beige;
+      font-size: 1.1em;
+    }
+    &-image--big {
+      height: 100%;
+    }
+    &-image--small {
+      height: 80%;
+    }
   }
   &__greeting {
     position: absolute;
@@ -128,7 +141,7 @@ body {
   padding: 0 2em 3em 2em;
   display: inline-block;
   position: relative;
-  border-bottom: solid $odd-red 1em;
+  border-bottom: solid $odd-red 0.2em;
   @media (orientation: landscape) {
     flex: 1;
   }
