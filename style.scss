@@ -94,6 +94,13 @@ body {
       max-width: 50%;
     }
   }
+  .egg {
+    position: fixed;
+    background-color: $odd-red;
+    height: 5em;
+    width: 100%;
+    bottom: 0;
+  }
   &__greeting {
     position: absolute;
     bottom: 0;
