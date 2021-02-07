@@ -19,6 +19,7 @@ body {
 .social-media {
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 
 .social-media-link {
@@ -74,6 +75,7 @@ body {
   left: 0.3em;
   bottom: 0.3em;
   animation: 1s indicate-scroll linear alternate infinite;
+  z-index: 4;
   @media (orientation: landscape) {
     display: none;
   }
@@ -89,7 +91,7 @@ body {
     width: 100%;
     position: fixed;
     object-fit: cover;
-    z-index: -1;
+    z-index: 1;
     @media (orientation: landscape) {
       // Two flex items equally split === 50%
       max-width: 50%;
@@ -104,6 +106,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    z-index: 2;
     &-claim {
       color: $odd-beige;
       font-size: 1.1em;
@@ -122,6 +125,7 @@ body {
     background-color: $odd-beige;
     border-top: 0.2em solid $odd-red;
     padding-top: 1em;
+    z-index: 3;
     &--sub {
       margin-left: 3em;
     }
@@ -143,6 +147,7 @@ body {
   display: inline-block;
   position: relative;
   border-bottom: solid $odd-red 0.2em;
+  z-index: 5;
   @media (orientation: landscape) {
     flex: 1;
   }
