@@ -142,6 +142,10 @@ body {
   }
 }
 
+.egg {
+  background-color: $odd-red;
+}
+
 .link {
   &:link {
     color: $odd-red;
