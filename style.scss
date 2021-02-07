@@ -121,6 +121,7 @@ body {
   padding: 0 2em 3em 2em;
   display: inline-block;
   position: relative;
+  border-bottom: solid $odd-red 1em;
   @media (orientation: landscape) {
     flex: 1;
   }
@@ -140,15 +141,6 @@ body {
     margin: 0.2em;
     border-radius: 5px;
   }
-}
-
-.egg {
-  transform-origin: bottom center;
-  background-color: $odd-red;
-  margin-top: -1em;
-  transform: rotate(180deg);
-  position: relative;
-  z-index: -1;
 }
 
 .link {
