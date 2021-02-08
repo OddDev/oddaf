@@ -64,7 +64,7 @@ body {
   height: 100%;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  box-shadow: 5em 0px 0px #e83f6f;
+  box-shadow: 200px 0px 0px pink;
   @media (orientation: landscape) {
     height: 100%;
     display: flex;
@@ -150,6 +150,7 @@ body {
   display: inline-block;
   position: relative;
   border-bottom: solid $odd-red 0.2em;
+  box-shadow: 180px 0px 0px green;
   z-index: 5;
   @media (orientation: landscape) {
     flex: 1;
