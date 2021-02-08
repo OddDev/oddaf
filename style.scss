@@ -136,6 +136,8 @@ body {
     }
     @media (orientation: landscape) {
       position: fixed;
+      color: $odd-beige;
+      background-color: $odd-red;
     }
   }
   @media (orientation: landscape) {
@@ -149,10 +151,12 @@ body {
   display: inline-block;
   position: relative;
   border-bottom: solid $odd-red 0.2em;
+  box-shadow: 0px 15px 15px $odd-grey;
   z-index: 5;
   @media (orientation: landscape) {
     flex: 1;
     overflow-y: scroll;
+    border: none;
   }
 }
 
