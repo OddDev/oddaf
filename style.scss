@@ -65,8 +65,9 @@ body {
   overflow-y: scroll;
   scroll-behavior: smooth;
   @media (orientation: landscape) {
-    height: auto;
+    height: 100%;
     display: flex;
+    overflow-y: hidden;
   }
 }
 
@@ -95,6 +96,7 @@ body {
     @media (orientation: landscape) {
       // Two flex items equally split === 50%
       max-width: 50%;
+      height: 100%;
     }
   }
   &__egg {
@@ -150,6 +152,7 @@ body {
   z-index: 5;
   @media (orientation: landscape) {
     flex: 1;
+    overflow-y: scroll;
   }
 }
 
