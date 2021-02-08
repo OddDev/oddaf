@@ -199,8 +199,24 @@
       <div class="splash">
         <picture>
           <source
+            srcset="/assets/profile-picture/512x768.jpg"
+            media="(min-width: 813px) and (orientation: landscape) and (max-aspect-ratio: 2/1)"
+          />
+          <source
+            srcset="/assets/profile-picture/406x375.jpg"
+            media="(min-width: 741px) and (orientation: landscape)"
+          />
+          <source
             srcset="/assets/profile-picture/370x360.jpg"
             media="(orientation: landscape)"
+          />
+          <source
+            srcset="/assets/profile-picture/768x1024.jpg"
+            media="(min-width: 376px)"
+          />
+          <source
+            srcset="/assets/profile-picture/375x812.jpg"
+            media="(min-width: 361px)"
           />
           <img
             aria-label="A picture of Kai Klostermann serving as a full width, full height splash image"
