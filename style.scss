@@ -64,6 +64,7 @@ body {
   height: 100%;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  box-shadow: 5em 0px 0px #e83f6f;
   @media (orientation: landscape) {
     height: 100%;
     display: flex;
