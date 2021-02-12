@@ -45,9 +45,12 @@ body {
     border-radius: 50%;
     background-color: $odd-red;
     overflow: hidden;
-    img {
-      height: 100%;
+    svg {
+      color: var(--odd-social-media-icon);
       transform: rotate(180deg);
+      @media (min-width: 1280px) {
+        transform: rotate(0deg);
+      }
     }
   }
   &__label {
@@ -77,6 +80,7 @@ body {
   bottom: 0.3em;
   animation: 1s indicate-scroll linear alternate infinite;
   z-index: 4;
+  width: 2em;
   @media (orientation: landscape) {
     display: none;
   }
@@ -114,10 +118,10 @@ body {
       font-size: 1.1em;
     }
     &-image--big {
-      height: 100%;
+      width: 4em;
     }
     &-image--small {
-      height: 80%;
+      width: 3em;
     }
   }
   &__greeting {
