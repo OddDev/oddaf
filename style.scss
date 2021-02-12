@@ -40,7 +40,7 @@ body {
 .social-media {
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 9; // TODO set back to appropriated value (2 was default)
   @media (min-width: 1280px) {
     position: static;
     display: flex;
