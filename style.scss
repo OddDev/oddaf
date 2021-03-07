@@ -81,10 +81,9 @@ header {
   $self: &;
   &__icon {
     height: 1.5em;
+    transition: height 200ms;
   }
   &__label {
-    display: inline-block;
-
     font-size: 0;
 
     transition: font-size 200ms;
@@ -98,10 +97,13 @@ header {
   }
   &:focus-within,
   &:hover {
-    transform: translateY(-0.2em);
     #{$self}__label {
       font-size: 1.2em;
       text-decoration: underline;
+    }
+    #{$self}__icon {
+      height: 0px;
+      overflow: hidden;
     }
   }
 }
