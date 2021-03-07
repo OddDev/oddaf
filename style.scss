@@ -79,14 +79,18 @@ header {
 .social-media-entry {
   transition: transform 200ms;
   $self: &;
+  display: flex;
+  flex-direction: column;
   &__icon {
     height: 1.5em;
     transition: height 200ms;
   }
   &__label {
-    font-size: 0;
+    transform-origin: center top;
 
-    transition: font-size 200ms;
+    writing-mode: vertical-lr;
+
+    animation: dangling 1s;
     &:link {
       text-decoration: none;
       color: var(--link);
@@ -94,16 +98,50 @@ header {
     &:visited {
       color: var(--visited);
     }
+    &::before {
+      content: "— ";
+    }
   }
   &:focus-within,
   &:hover {
     #{$self}__label {
-      font-size: 1.2em;
       text-decoration: underline;
     }
-    #{$self}__icon {
-      height: 0px;
-      overflow: hidden;
-    }
+  }
+}
+
+@keyframes dangling {
+  0% {
+    transform: rotate(-130deg);
+  }
+  10% {
+    transform: rotate(70deg);
+  }
+  20% {
+    transform: rotate(-40deg);
+  }
+  30% {
+    transform: rotate(20deg);
+  }
+  40% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  60% {
+    transform: rotate(1deg);
+  }
+  70% {
+    transform: rotate(0.5deg);
+  }
+  80% {
+    transform: rotate(-0.25deg);
+  }
+  90% {
+    transform: rotate(0.1deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
