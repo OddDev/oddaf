@@ -48,6 +48,7 @@
     <meta property="twitter:image" content="https://assets.odd.af/meta.jpg" />
 
     <link rel="stylesheet" href="style.scss" />
+    <script src="main.js"></script>
     <link
       rel="apple-touch-icon"
       sizes="57x57"
@@ -137,8 +138,27 @@
           src="/assets/profile-picture/kai_klostermann_but_annoyed.jpg"
         />
       </figure>
-      <h2 class="name">Kai</h2>
-      <span class="title"><i>Front-End Engineer</i></span>
+      <h2 class="name">
+        <span class="non-technical-label" aria-hidden="true">Kai</span>
+        <code class="hackor hackor--in-h2"
+          ><span class="hackor__red">const</span>
+          <span class="hackor__cyan">kai</span>
+          <span class="hackor__violet">=</span>
+          <span class="hackor__red">new</span> Person();</code
+        >
+      </h2>
+      <span class="title"
+        ><i>
+          <span class="non-technical-label" aria-hidden="true"
+            >Front-End Engineer</span
+          >
+          <code class="hackor"
+            >kai.<span class="hackor__cyan">job</span>
+            <span class="hackor__violet">=</span>
+            <span class="hackor__green">"Front-End Engineer"</span>;</code
+          ></i
+        ></span
+      >
       <ul class="social-media-container">
         <li class="social-media-entry">
           <svg class="social-media-entry__icon" viewBox="0 0 100 100">
@@ -195,7 +215,100 @@
           <a class="social-media-entry__label" href="mailto:hey@odd.af">Mail</a>
         </li>
       </ul>
+      <a href="#" class="download-button">Download vCard!</a>
     </header>
+    <main>
+      <h3 class="content-headline" id="bio">
+        <a class="link link--perma" href="#bio" title="Permalink to Biography"
+          ><code class="hackor hackor--in-h3"
+            >kai.<span class="hackor__cyan">bio</span>
+            <span class="hackor__violet">=</span>
+            <span class="hackor__green">"</span></code
+          ></a
+        >
+      </h3>
+      <p class="paragraph">
+        Howdy, my name is Kai Klostermann. Welcome to my <i>odd</i> world!
+      </p>
+      <p class="paragraph">
+        I'm a Front End Engineer for an expensive cars company from Stuttgart,
+        Germany. I mostly work with <b>Vue</b> and <b>Stencil</b>. If not that,
+        I make sure the company culture is kickin'! I joined tech in 2010 only
+        to find my profession as a software developer three years later.
+      </p>
+      <p class="paragraph">
+        On top of that, I'm a LinkedIn Learning Instructor and can speak! Wanna
+        hear stuff about performance, side-projects, or archery? Ping me.
+      </p>
+      <p class="paragraph">
+        Besides letting arrows fly, I love mechanical keyboards and (very
+        casually) play Magic the Gathering. Reach out to me anytime and keep
+        your fingers crossed that my three ladies (👩👶🐶) do not occupy me. 😸
+      </p>
+      <ul class="interests">
+        <li class="interests__item">🏹 Archery</li>
+        <li class="interests__item">⚡️ Performance</li>
+        <li class="interests__item">⌨️ Mechanical Keyboards</li>
+        <li class="interests__item">🐥 Front End</li>
+        <li class="interests__item">🎑 Vue.js</li>
+        <li class="interests__item">📦 Stencil.js</li>
+        <li class="interests__item">🎤 Speaking</li>
+        <li class="interests__item">👯 Company Culture</li>
+        <li class="interests__item">🧙 Magic the Gathering</li>
+        <li class="interests__item">♟ Chess</li>
+      </ul>
+    </main>
+    <footer>
+      Message Me!
+      <code>{...love}</code>
+    </footer>
+    <aside>
+      <button class="settings">
+        <svg class="settings__icon" viewBox="0 0 100 100">
+          <use href="/assets/icons/settings.svg#Capa_1"></use>
+        </svg>
+        <svg class="settings__icon settings__icon--close" viewBox="0 0 100 100">
+          <use href="/assets/icons/close.svg#Capa_1"></use>
+        </svg>
+      </button>
+      <h2>Make it yours!</h2>
+      <p>
+        It won't get saved or anything. I don't wanna create a cookie-layer.
+        However, for this very session it's all yours!
+      </p>
+      <h3>Light/Dark</h3>
+      <input class="checkbox checkbox--theme-switcher" type="checkbox" checked>Light</input>
+      <h3>Animations</h3>
+      <input type="checkbox">Make the moving stop!</input>
+      <h3>Nerd Level</h3>
+      <input
+        type="radio"
+        id="nerdLevelChoice1"
+        name="nerdLevel"
+        value="User"
+        checked
+      />
+      <label for="nerdLevelChoice1">User</label>
+
+      <input type="radio" id="nerdLevelChoice2" name="nerdLevel" value="dev" />
+      <label for="nerdLevelChoice2">Dev</label>
+
+      <input
+        type="radio"
+        id="nerdLevelChoice3"
+        name="nerdLevel"
+        value="hacker"
+      />
+      <label for="nerdLevelChoice3">Hacker</label>
+
+      <input
+        type="radio"
+        id="nerdLevelChoice4"
+        name="nerdLevel"
+        value="apache"
+      />
+      <label for="nerdLevelChoice4">Apache</label>
+    </aside>
     <!-- only contains clip-paths -->
     <svg aria-hidden="true" height="0" width="0">
       <defs>
@@ -207,6 +320,11 @@
         <clipPath id="torso-path">
           <path
             d="m 57.084476,224.21094 -2.547927,0.79276 -2.25341,1.0366 -3.116424,0.99011 -4.16909,1.79829 -3.473589,2.19009 -3.726094,2.65005 -2.430513,2.89252 -2.827877,2.65094 -2.438231,0.28407 -4.133781,0.3952 -1.667111,0.55894 -3.490738,-0.0272 -3.09225,-0.12733 -3.232999,0.18939 -4.242829,1.1879 -3.5538321,0.0706 -2.4316644,2e-5 -2.6748882,0.40452 -0.63555472,4.63332 2.37466752,6.55064 -0.1181072,8.11434 -0.3810963,14.6967 -1.92757351,3.3582 2.79660411,16.81176 -0.2029612,23.69062 10.156698,15.97407 18.480358,0.82675 12.694102,-2.98852 13.835689,3.36994 16.791086,-6.71024 7.540586,-9.198 13.089395,-9.28899 15.133539,-10.02399 24.50321,8.39252 44.79515,22.68888 37.76067,-2.0764 19.27082,-6.05845 -0.0775,-64.19903 -3.77174,-4.63899 -3.44636,-2.6187 -3.59704,-2.20502 -3.72346,-2.52081 -3.88422,-1.32474 -5.44722,-1.56922 -6.46194,-1.15436 h -4.95955 l -6.93033,-0.4304 -6.41435,-0.26231 -11.7581,-0.65707 -5.55486,-0.56082 -5.97281,-1.36257 -3.07166,-0.95921 -1.78575,-0.38337 -0.37468,-1.9163 -1.02618,-1.75314 -0.59208,-1.21236 -0.1283,-2.19075 -1.13364,-2.34782 -1.08294,-0.83986 -0.4813,-1.0583 0.18422,-1.89848 -9.32079,-15.52628 -0.69323,-1.24322 -1.8429,1.78095 -0.3727,1.2047 0.2017,1.7054 -0.13079,4.203 -0.0496,2.49237 -0.19607,3.82553 -0.30104,0.8802 -0.55664,3.41637 0.35047,1.90022 0.70187,0.3855 -1.13185,0.8984 0.0357,1.7701 z"
+          />
+        </clipPath>
+        <clipPath id="spread-love">
+          <path
+            d="M 438.74023 366.17969 L 438.74023 368.97266 L 440.10742 368.97266 C 441.93034 368.97266 443.11524 369.25911 443.66211 369.83203 C 444.22201 370.39193 444.50195 371.59637 444.50195 373.44531 L 444.50195 378.28906 C 444.50195 380.33333 444.79493 381.81772 445.38086 382.74219 C 445.96679 383.66666 446.98242 384.29167 448.42773 384.61719 C 446.98242 384.96876 445.96679 385.60678 445.38086 386.53125 C 444.79493 387.45572 444.50195 388.9336 444.50195 390.96484 L 444.50195 395.80859 C 444.50195 397.67057 444.22201 398.88151 443.66211 399.44141 C 443.11524 400.00131 441.93034 400.28125 440.10742 400.28125 L 438.74023 400.28125 L 438.74023 403.09375 L 439.9707 403.09375 C 443.21288 403.09375 445.37436 402.61199 446.45508 401.64844 C 447.54882 400.68491 448.0957 398.76433 448.0957 395.88672 L 448.0957 391.21875 C 448.0957 389.25261 448.44727 387.89192 449.15039 387.13672 C 449.85351 386.38152 451.12955 386.00391 452.97852 386.00391 L 454.18945 386.00391 L 454.18945 383.21094 L 452.97852 383.21094 C 451.12955 383.21094 449.85351 382.83983 449.15039 382.09766 C 448.44727 381.34246 448.0957 379.99479 448.0957 378.05469 L 448.0957 373.36719 C 448.0957 370.48961 447.54882 368.57553 446.45508 367.625 C 445.37436 366.66145 443.21288 366.17969 439.9707 366.17969 L 438.74023 366.17969 z M 438.74023 400.28125 L 438.74023 396.88281 C 437.46422 397.5599 436.17514 398.06773 434.87305 398.40625 C 433.584 398.74479 432.24935 398.91406 430.86914 398.91406 C 428.48632 398.91406 426.62433 398.26951 425.2832 396.98047 C 423.95505 395.67837 423.21286 393.79033 423.05664 391.31641 L 439.58008 391.31641 L 439.58008 389.55859 C 439.58008 386.30339 438.72071 383.73175 437.00195 381.84375 C 435.29625 379.9427 432.97201 378.99219 430.0293 378.99219 C 426.74806 378.99219 424.13737 380.04687 422.19727 382.15625 C 420.67484 383.8124 419.765 385.94087 419.44531 388.52344 L 419.36523 388.52344 L 412.5293 406.88281 L 405.69336 388.52344 L 401.88477 388.52344 L 402.03516 388.92578 C 400.29528 387.2063 397.99433 386.33594 395.11914 386.33594 C 391.98112 386.33594 389.52019 387.35157 387.73633 389.38281 C 386.52707 390.76991 385.7409 392.53074 385.35742 394.64648 L 385.35742 374.88672 L 381.76367 374.88672 L 381.76367 405.27734 L 385.35742 405.27734 L 385.35742 400.98633 C 385.7409 403.09881 386.52707 404.86183 387.73633 406.25781 C 389.52019 408.28906 391.98112 409.30469 395.11914 409.30469 C 398.24413 409.30469 400.69859 408.28906 402.48242 406.25781 C 404.26628 404.21357 405.1582 401.40104 405.1582 397.82031 C 405.1582 397.60809 405.14489 397.40795 405.13867 397.20117 L 410.08789 410.39844 L 414.9707 410.39844 L 420.36328 396.01758 C 420.85603 397.10362 421.51282 398.07337 422.35352 398.91406 C 424.39779 400.94531 427.16471 401.96094 430.6543 401.96094 C 432.04751 401.96094 433.42124 401.81771 434.77539 401.53125 C 436.12957 401.24481 437.45119 400.82812 438.74023 400.28125 z M 381.76367 405.27734 L 377.64258 405.27734 L 377.64258 410.23828 L 381.76367 410.23828 L 381.76367 405.27734 z M 377.64258 410.23828 L 373.52148 410.23828 L 373.52148 415.19922 L 377.64258 415.19922 L 377.64258 410.23828 z M 373.52148 410.23828 L 373.52148 405.27734 L 369.40039 405.27734 L 369.40039 410.23828 L 373.52148 410.23828 z M 369.40039 410.23828 L 368.07227 410.23828 C 366.23633 410.23828 365.03841 409.95183 364.47852 409.37891 C 363.91862 408.80601 363.63867 407.60157 363.63867 405.76562 L 363.63867 400.92188 C 363.63867 398.89063 363.3457 397.41275 362.75977 396.48828 C 362.17383 395.56381 361.1582 394.92579 359.71289 394.57422 C 361.14518 394.2487 362.1543 393.62369 362.74023 392.69922 C 363.33919 391.77475 363.63867 390.29036 363.63867 388.24609 L 363.63867 383.40234 C 363.63867 381.56643 363.91862 380.36199 364.47852 379.78906 C 365.03841 379.21614 366.23633 378.92969 368.07227 378.92969 L 369.40039 378.92969 L 369.40039 376.13672 L 368.18945 376.13672 C 364.94728 376.13672 362.77278 376.61848 361.66602 377.58203 C 360.57227 378.53256 360.02539 380.44664 360.02539 383.32422 L 360.02539 388.01172 C 360.02539 389.95183 359.67382 391.29949 358.9707 392.05469 C 358.2806 392.79686 357.00455 393.16797 355.14258 393.16797 L 353.95117 393.16797 L 353.95117 395.96094 L 355.14258 395.96094 C 356.99153 395.96094 358.26758 396.33855 358.9707 397.09375 C 359.67382 397.84895 360.02539 399.20965 360.02539 401.17578 L 360.02539 405.84375 C 360.02539 408.72136 360.57227 410.64194 361.66602 411.60547 C 362.77278 412.56902 364.94728 413.05078 368.18945 413.05078 L 369.40039 413.05078 L 369.40039 410.23828 z M 430.06836 382.03906 C 431.83917 382.03906 433.25846 382.62499 434.32617 383.79688 C 435.40699 384.96876 435.96038 386.53777 435.98633 388.50391 L 423.17383 388.52344 C 423.35613 386.46614 424.04623 384.87108 425.24414 383.73828 C 426.45508 382.60546 428.06314 382.03906 430.06836 382.03906 z M 395.11914 389.38281 C 397.03319 389.38281 398.55015 390.14452 399.66992 391.66797 C 400.78972 393.17837 401.34961 395.22917 401.34961 397.82031 C 401.34961 400.42446 400.78972 402.48176 399.66992 403.99219 C 398.55015 405.50259 397.03319 406.25781 395.11914 406.25781 C 393.17903 406.25781 391.6491 405.50909 390.5293 404.01172 C 389.42253 402.50129 388.86914 400.43748 388.86914 397.82031 C 388.86914 395.20312 389.42903 393.14581 390.54883 391.64844 C 391.66863 390.13801 393.19206 389.38281 395.11914 389.38281 z "
           />
         </clipPath>
       </defs>
