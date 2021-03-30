@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 function initThemeSwitcher() {
-  const themeSwitcherCheckBox = document.querySelector(
+  /* const themeSwitcherCheckBox = document.querySelector(
     ".checkbox--theme-switcher"
   );
   options.set("lightTheme", themeSwitcherCheckBox);
@@ -19,7 +19,7 @@ function initThemeSwitcher() {
     clickEvent.preventDefault();
     console.log(clickEvent.target);
     changeLocalStorageItem("lightTheme", clickEvent.target.checked);
-  });
+  }); */
 }
 
 function initSettingsButton() {
@@ -42,7 +42,7 @@ function changeLocalStorageItem(key, value) {
   console.log(key, value);
   localStorage.setItem(key, value);
   // console.log(options.get(key));
-  options.get(key).checked = value;
+  // options.get(key).checked = value;
 }
 
 /* setLocalStorageItem(
