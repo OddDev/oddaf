@@ -1,33 +1,24 @@
+@use 'colors';
+
 :root {
-  // Base Theme
-  --green: #06d6a0;
-  --red: #ef476f;
-  --yellow: #ffd166;
-  --blue: #118ab2;
-  --foreground: #073b4c;
-  --background: floralwhite;
-  --link: #7b270b;
-  --visited: #4c1807;
-
-  // Code Theme (Solarized Light)
+  @include colors.light;
+  [for="theme-switcher-option-system"] {
+    &::after {
+      content: " (light)";
+    }
+  }
   @media (prefers-color-scheme: dark) {
-    // Base Theme Dark
-    --foreground: floralwhite;
-    --background: #073b4c;
-    --link: #ffd88a;
-    --visited: #ffe9bd;
-
-    // Code Theme Dark (Solarized Dark)
-    --code-background: #002b36;
-    --code-foreground: #839496;
-    --cedo-yellow: #b58900;
-    --code-orange: #cb4b16;
-    --code-red: #dc322f;
-    --code-magenta: #d33682;
-    --code-violet: #6c71c4;
-    --code-blue: #268bd2;
-    --code-cyan: #2aa198;
-    --code-green: #859900;
+    [for="theme-switcher-option-system"] {
+      &::after {
+        content: " (dark)";
+      }
+    }
+    :not([data-theme="light"]) {
+      @include colors.dark;
+    }
+  }
+  [data-theme="dark"] {
+    @include colors.dark;
   }
 }
 

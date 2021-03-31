@@ -2,6 +2,7 @@ const options = new Map();
 
 window.addEventListener("DOMContentLoaded", function () {
   initThemeSwitcher();
+  initEventListeners();
   // Settings default values
   setLocalStorageItem(
     "lightTheme",
@@ -10,7 +11,35 @@ window.addEventListener("DOMContentLoaded", function () {
   initSettingsButton();
 });
 
+function initEventListeners() {
+  document.getElementById('theme-switcher-option-system').addEventListener('change', () => {
+    localStorage.removeItem('theme');
+    document.body.removeAttribute('data-theme');
+  });
+  document.getElementById('theme-switcher-option-light').addEventListener('change', () => {
+    localStorage.setItem('theme', 'light');
+    document.body.setAttribute('data-theme', 'light');
+  });
+  document.getElementById('theme-switcher-option-dark').addEventListener('change', () => {
+    localStorage.setItem('theme', 'dark');
+    document.body.setAttribute('data-theme', 'dark');
+  });
+}
+
 function initThemeSwitcher() {
+  const entry = localStorage.getItem('theme');
+  if (entry === null) {
+    document.getElementById('theme-switcher-option-system').checked = true;
+    return;
+  }
+  if (entry === 'light') {
+    document.getElementById('theme-switcher-option-light').checked = true;
+    document.body.setAttribute('data-theme', 'light');
+    return
+  } 
+  document.getElementById('theme-switcher-option-dark').checked = true;
+  document.body.setAttribute('data-theme', 'dark');
+  
   /* const themeSwitcherCheckBox = document.querySelector(
     ".checkbox--theme-switcher"
   );
