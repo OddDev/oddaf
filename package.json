@@ -1,6 +1,6 @@
 {
   "name": "ungra.dev",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Personal portfolio website of OddDev",
   "browserlist": "defaults",
   "source": "index.html",
