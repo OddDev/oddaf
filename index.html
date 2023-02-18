@@ -23,7 +23,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://odd.af/" />
+    <meta property="og:url" content="https://ungra.dev/" />
     <meta
       property="og:title"
       content="Odd Portfolio Website of Kai Klostermann"
@@ -32,11 +32,11 @@
       property="og:description"
       content="Bundled information about Kai Klostermann, a software engineer trying to conquer the magic behind side-projects. This is his portfolio website. Enjoy!"
     />
-    <meta property="og:image" content="https://assets.odd.af/meta.jpg" />
+    <meta property="og:image" content="https://assets.ungra.dev/meta.jpg" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://odd.af/" />
+    <meta property="twitter:url" content="https://ungra.dev/" />
     <meta
       property="twitter:title"
       content="Odd Portfolio Website of Kai Klostermann"
@@ -45,7 +45,10 @@
       property="twitter:description"
       content="Bundled information about Kai Klostermann, a software engineer trying to conquer the magic behind side-projects. This is his portfolio website. Enjoy!"
     />
-    <meta property="twitter:image" content="https://assets.odd.af/meta.jpg" />
+    <meta
+      property="twitter:image"
+      content="https://assets.ungra.dev/meta.jpg"
+    />
 
     <link rel="stylesheet" href="style.scss" />
     <script src="main.js"></script>
@@ -130,39 +133,29 @@
     <header>
       <figure class="profile-picture">
         <img
+          alt="TODO add alt"
           class="profile-picture__clip-image profile-picture__clip-image--torso"
           src="/assets/profile-picture/kai_klostermann_but_annoyed.jpg"
         />
         <img
+          aria-hidden="true"
+          alt="TODO add alt"
           class="profile-picture__clip-image profile-picture__clip-image--head"
           src="/assets/profile-picture/kai_klostermann_but_annoyed.jpg"
         />
       </figure>
       <h2 class="name">
-        <span class="non-technical-label" aria-hidden="true">Kai</span>
-        <code class="hackor hackor--in-h2"
-          ><span class="hackor__red">const</span>
-          <span class="hackor__cyan">kai</span>
-          <span class="hackor__violet">=</span>
-          <span class="hackor__red">new</span> Person();</code
-        >
+        <span>Kai [kɑɪ] (he/him)</span>
       </h2>
-      <span class="title"
-        ><i>
-          <span class="non-technical-label" aria-hidden="true"
-            >Front-End Engineer</span
-          >
-          <code class="hackor"
-            >kai.<span class="hackor__cyan">job</span>
-            <span class="hackor__violet">=</span>
-            <span class="hackor__green">"Front-End Engineer"</span>;</code
-          ></i
-        ></span
-      >
+      <span class="title">
+        <i>
+          <span>Software Developer</span>
+        </i>
+      </span>
       <ul class="social-media-container">
         <li class="social-media-entry">
           <svg class="social-media-entry__icon" viewBox="0 0 100 100">
-            <use href="/assets/icons/github.svg#Capa_1"></use>
+            <use href="/assets/icons/brand-github.svg#brand-github"></use>
           </svg>
           <a
             rel="noopener"
@@ -174,7 +167,7 @@
         </li>
         <li class="social-media-entry">
           <svg class="social-media-entry__icon" viewBox="0 0 100 100">
-            <use href="/assets/icons/linkedin.svg#Capa_1"></use>
+            <use href="/assets/icons/brand-linkedin.svg#brand-linkedin"></use>
           </svg>
           <a
             rel="noopener"
@@ -186,134 +179,167 @@
         </li>
         <li class="social-media-entry">
           <svg class="social-media-entry__icon" viewBox="0 0 100 100">
-            <use href="/assets/icons/twitter.svg#Capa_1"></use>
+            <use href="/assets/icons/brand-mastodon.svg#brand-mastodon"></use>
+          </svg>
+          <a
+            rel="noopener me"
+            class="social-media-entry__label"
+            target="_blank"
+            href="https://hachyderm.io/OddDev"
+            >Mastodon</a
+          >
+        </li>
+        <li class="social-media-entry">
+          <svg class="social-media-entry__icon" viewBox="0 0 100 100">
+            <use href="/assets/icons/ballpen.svg#ballpen"></use>
           </svg>
           <a
             rel="noopener"
             class="social-media-entry__label"
             target="_blank"
-            href="https://twitter.com/OddChirp"
-            >Twitter</a
+            href="https://blog.ungra.dev/"
+            >Blog</a
           >
         </li>
         <li class="social-media-entry">
           <svg class="social-media-entry__icon" viewBox="0 0 100 100">
-            <use href="/assets/icons/devto.svg#Capa_1"></use>
+            <use href="/assets/icons/mail.svg#mail"></use>
           </svg>
-          <a
-            rel="noopener"
-            class="social-media-entry__label"
-            target="_blank"
-            href="https://dev.to/odddev"
-            >Dev.to</a
+          <a class="social-media-entry__label" href="mailto:hey@ungra.dev"
+            >Mail</a
           >
-        </li>
-        <li class="social-media-entry">
-          <svg class="social-media-entry__icon" viewBox="0 0 100 100">
-            <use href="/assets/icons/mail.svg#Capa_1"></use>
-          </svg>
-          <a class="social-media-entry__label" href="mailto:hey@odd.af">Mail</a>
         </li>
       </ul>
-      <a href="#" class="download-button">Download vCard!</a>
     </header>
     <main>
       <h3 class="content-headline" id="bio">
-        <a class="link link--perma" href="#bio" title="Permalink to Biography"
-          ><code class="hackor hackor--in-h3"
-            >kai.<span class="hackor__cyan">bio</span>
-            <span class="hackor__violet">=</span>
-            <span class="hackor__green">"</span></code
-          ></a
-        >
+        <a class="link link--perma" href="#bio" title="Permalink to Biography">
+          Bio
+        </a>
       </h3>
       <p class="paragraph">
-        Howdy, my name is Kai Klostermann. Welcome to my <i>odd</i> world!
+        Look who's found their way on my website! Welcome to a truly
+        <i>odd</i> world!
       </p>
       <p class="paragraph">
-        I'm a Front End Engineer for an expensive cars company from Stuttgart,
-        Germany. I mostly work with <b>Vue</b> and <b>Stencil</b>. If not that,
-        I make sure the company culture is kickin'! I joined tech in 2010 only
-        to find my profession as a software developer three years later.
+        I'm mainly a developer for a small (but great) company called "Team One
+        Developers" in Stuttgart, Germany. I work primarily on the web front
+        end. Currently, SSR frameworks like Gatsby and Next.js keep me busy.
+        Generally, I'm profound in Design Systems and Web-Performance. I'm
+        trying to learn Rust and WASM. I joined tech in 2010, only to find my
+        profession as a software developer three years later.
       </p>
       <p class="paragraph">
-        On top of that, I'm a LinkedIn Learning Instructor and can speak! Wanna
-        hear stuff about performance, side-projects, or archery? Ping me.
+        When I'm not writing code, I enable people! I am getting more and more
+        into DevRel, speaking, writing, and teaching - for my employer, but also
+        LinkedIn Learning.
       </p>
       <p class="paragraph">
-        Besides letting arrows fly, I love mechanical keyboards and (very
-        casually) play Magic the Gathering. Reach out to me anytime and keep
-        your fingers crossed that my three ladies (👩👶🐶) do not occupy me. 😸
+        I organize the WebDevBBQ in Stuttgart together with
+        <a class="link" href="https://activenode.de/">David Lorenz</a>. It's a
+        community of web-people gathering once in a while to present and discuss
+        the hottest topics. Find out more on our
+        <a
+          class="link"
+          href="https://www.meetup.com/de-DE/web-dev-bbq-stuttgart/"
+          >meetup.com page</a
+        >.
+      </p>
+      <p class="paragraph">
+        Besides letting arrows fly, I love mechanical keyboards and chess. I
+        cycle a lot and dislike car-centric-infrastructure and -culture.
+      </p>
+      <p class="paragraph">
+        Reach out to me anytime and keep your fingers crossed that my four
+        besties (👩🧒👶🐶) do not occupy me. 😸
       </p>
       <ul class="interests">
         <li class="interests__item">🏹 Archery</li>
         <li class="interests__item">⚡️ Performance</li>
         <li class="interests__item">⌨️ Mechanical Keyboards</li>
         <li class="interests__item">🐥 Front End</li>
-        <li class="interests__item">🎑 Vue.js</li>
-        <li class="interests__item">📦 Stencil.js</li>
         <li class="interests__item">🎤 Speaking</li>
         <li class="interests__item">👯 Company Culture</li>
-        <li class="interests__item">🧙 Magic the Gathering</li>
         <li class="interests__item">♟ Chess</li>
+        <li class="interests__item">🚲 Cycling</li>
+        <li class="interests__item">🦀 WASM/Rust</li>
+        <li class="interests__item">🖊 Writing</li>
       </ul>
+      <a href="./assets/vcard.vcf" class="download-button">Download vCard!</a>
     </main>
     <footer>
-      Message Me!
-      <code>{...love}</code>
+      <a class="link link--cta" href="mailto:hey@ungra.dev">Message Me!</a>
+      <br />
+      <code class="hackor hackor--cta"
+        ><span class="hackor__yellow">{</span
+        ><span class="hackor__green">...</span
+        ><span class="hackor__blue">love</span
+        ><span class="hackor__yellow">}</span></code
+      >
     </footer>
     <aside>
-      <button class="settings">
-        <svg class="settings__icon" viewBox="0 0 100 100">
-          <use href="/assets/icons/settings.svg#Capa_1"></use>
+      <button class="settings-toggle">
+        <svg class="settings-toggle__icon" viewBox="0 0 100 100">
+          <use href="/assets/icons/settings.svg#settings"></use>
         </svg>
-        <svg class="settings__icon settings__icon--close" viewBox="0 0 100 100">
-          <use href="/assets/icons/close.svg#Capa_1"></use>
+        <svg
+          class="settings-toggle__icon settings-toggle__icon--close"
+          viewBox="0 0 100 100"
+        >
+          <use href="/assets/icons/caret-left.svg#caret-left"></use>
         </svg>
       </button>
-      <h2>Make it yours!</h2>
-      <p>
-        It won't get saved or anything. I don't wanna create a cookie-layer.
-        However, for this very session it's all yours!
-      </p>
-      <h3>Light/Dark</h3>
-      <input type="radio" name="theme-switcher" id="theme-switcher-option-system" value="system">
-      <label for="theme-switcher-option-system">System</label>
-      <input type="radio" name="theme-switcher" id="theme-switcher-option-light" value="light">
-      <label for="theme-switcher-option-light">Light</label>
-      <input type="radio" name="theme-switcher" id="theme-switcher-option-dark" value="dark">
-      <label for="theme-switcher-option-dark">Dark</label>
-      <h3>Animations</h3>
-      <input type="checkbox">Make the moving stop!</input>
-      <h3>Nerd Level</h3>
-      <input
-        type="radio"
-        id="nerdLevelChoice1"
-        name="nerdLevel"
-        value="User"
-        checked
-      />
-      <label for="nerdLevelChoice1">User</label>
-
-      <input type="radio" id="nerdLevelChoice2" name="nerdLevel" value="dev" />
-      <label for="nerdLevelChoice2">Dev</label>
-
-      <input
-        type="radio"
-        id="nerdLevelChoice3"
-        name="nerdLevel"
-        value="hacker"
-      />
-      <label for="nerdLevelChoice3">Hacker</label>
-
-      <input
-        type="radio"
-        id="nerdLevelChoice4"
-        name="nerdLevel"
-        value="apache"
-      />
-      <label for="nerdLevelChoice4">Apache</label>
-      <button>Reset</button>
+      <h2 class="settings-headline">Make it yours!</h2>
+      <section class="setting-controls">
+        <h3 class="option-headline">Theme</h3>
+        <input
+          type="radio"
+          name="theme-switcher"
+          id="theme-switcher-option-system"
+          value="system"
+        />
+        <label for="theme-switcher-option-system">System </label>
+        <br />
+        <input
+          type="radio"
+          name="theme-switcher"
+          id="theme-switcher-option-light"
+          value="light"
+        />
+        <label for="theme-switcher-option-light">Light</label>
+        <br />
+        <input
+          type="radio"
+          name="theme-switcher"
+          id="theme-switcher-option-dark"
+          value="dark"
+        />
+        <label for="theme-switcher-option-dark">Dark</label>
+        <h3>Animations</h3>
+        <input
+          type="radio"
+          name="motion-switcher"
+          id="motion-switcher-option-system"
+          value="system"
+        />
+        <label for="motion-switcher-option-system">System</label>
+        <br />
+        <input
+          type="radio"
+          name="motion-switcher"
+          id="motion-switcher-option-normal"
+          value="normal"
+        />
+        <label for="motion-switcher-option-normal">Normal</label>
+        <br />
+        <input
+          type="radio"
+          name="motion-switcher"
+          id="motion-switcher-option-reduced"
+          value="reduced"
+        />
+        <label for="motion-switcher-option-reduced">Reduced</label>
+      </section>
     </aside>
     <!-- only contains clip-paths -->
     <svg aria-hidden="true" height="0" width="0">

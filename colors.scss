@@ -1,33 +1,35 @@
 @mixin dark {
-    // Base Theme Dark
-    --foreground: floralwhite;
-    --background: #073b4c;
-    --link: #ffd88a;
-    --visited: #ffe9bd;
+  // Base Theme Dark
+  --foreground: floralwhite;
+  --background: #073b4c;
+  --link: #ffd88a;
+  --visited: #ffe9bd;
 
-    // Code Theme Dark (Solarized Dark)
-    --code-background: #002b36;
-    --code-foreground: #839496;
-    --cedo-yellow: #b58900;
-    --code-orange: #cb4b16;
-    --code-red: #dc322f;
-    --code-magenta: #d33682;
-    --code-violet: #6c71c4;
-    --code-blue: #268bd2;
-    --code-cyan: #2aa198;
-    --code-green: #859900;
+  // Code Theme Dark (Solarized Dark)
+  --code-background: #002b36;
 }
 
 @mixin light {
-    // Base Theme
-    --green: #06d6a0;
-    --red: #ef476f;
-    --yellow: #ffd166;
-    --blue: #118ab2;
-    --foreground: #073b4c;
-    --background: floralwhite;
-    --link: #7b270b;
-    --visited: #4c1807;
+  // Base Theme
+  --green: #06d6a0;
+  --red: #ef476f;
+  --yellow: #ffd166;
+  --blue: #118ab2;
+  --foreground: #073b4c;
+  --background: floralwhite;
+  --link: #7b270b;
+  --visited: #4c1807;
+  --foreground-aside: floralwhite;
 
-    // Code Theme (Solarized Light)
+  // Code Theme (Solarized Light)
+  --code-foreground: #839496;
+  --code-background: #fdf6e3;
+  --code-yellow: #b58900;
+  --code-orange: #cb4b16;
+  --code-red: #dc322f;
+  --code-magenta: #d33682;
+  --code-violet: #6c71c4;
+  --code-blue: #268bd2;
+  --code-cyan: #2aa198;
+  --code-green: #859900;
 }

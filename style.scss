@@ -1,4 +1,9 @@
-@use 'colors';
+@use "colors";
+@use "motion";
+@use "aside";
+@use "header";
+@use "main";
+@use "footer";
 
 :root {
   @include colors.light;
@@ -7,31 +12,41 @@
       content: " (light)";
     }
   }
+
   @media (prefers-color-scheme: dark) {
     [for="theme-switcher-option-system"] {
       &::after {
         content: " (dark)";
       }
     }
-    :not([data-theme="light"]) {
+    [data-theme="system"] {
       @include colors.dark;
     }
   }
   [data-theme="dark"] {
     @include colors.dark;
   }
-}
 
-aside {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 60%;
-  height: 100%;
-  max-width: 400px;
-  background-color: var(--blue);
-  transform: translateX(-100%);
-  transition: transform 200ms;
+  @include motion.normal;
+  [for="motion-switcher-option-system"] {
+    &::after {
+      content: " (normal)";
+    }
+  }
+
+  @media (prefers-reduced-motion) {
+    [for="motion-switcher-option-system"] {
+      &::after {
+        content: " (reduced)";
+      }
+    }
+    [data-motion="system"] {
+      @include motion.reduced;
+    }
+  }
+  [data-motion="reduced"] {
+    @include motion.reduced;
+  }
 }
 
 body {
@@ -39,271 +54,38 @@ body {
 
   background-color: var(--background);
   color: var(--foreground);
+  padding-right: calc(
+    max((100% - 1920px) / 2, env(safe-area-inset-right), 2rem)
+  );
+  padding-left: calc(max((100% - 1920px) / 2, env(safe-area-inset-left), 2rem));
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  &:hover {
-    .hackor {
-      display: none;
-    }
-    .non-technical-label {
-      display: inline;
-    }
-  }
-}
-
-main {
-  max-width: 350px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-footer {
-  bottom: 0;
-  position: sticky;
-}
-
-.open {
-  transform: translateX(0);
-  .settings__icon {
-    display: none;
-    &--close {
-      display: unset;
-    }
-  }
-}
-
-.settings {
-  position: absolute;
-  border: none;
-  color: inherit;
-  right: 0;
-  top: 1em;
-  transform: translateX(100%);
-  background-color: var(--blue);
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  &__icon {
-    height: 2em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    &--close {
-      display: none;
-    }
-  }
-}
-
-.profile-picture {
-  position: relative;
-
-  background-image: url(/assets/background.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  &__clip-image {
-    display: block;
-    box-sizing: border-box;
-    width: 239px;
-    height: 340px;
-    /* move out of the box */
-    padding-left: 239px;
-    &--head {
-      background-color: var(--red);
-      clip-path: url(#head-path);
-    }
-    &--torso {
-      background-color: var(--green);
-      clip-path: url(#torso-path);
-
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    &:hover {
-      /* show image on hover */
-      padding-left: 0;
-    }
-  }
-  @media (prefers-reduced-motion) {
-    background: none;
-    &__clip-image {
-      padding-left: 0;
-    }
-  }
-}
-
-.non-technical-label {
-  display: none;
-}
-
-.name {
-  margin-top: 1em;
-  padding-top: 0.6em;
-  border-top: solid;
-  border-color: var(--yellow);
-  width: 239px;
-  text-align: center;
-}
-
-.social-media-container {
-  list-style-type: none;
-  padding: 0;
-
-  display: flex;
-  justify-content: space-around;
-
-  width: 100%;
-  max-width: 239px;
-}
-
-.social-media-entry {
-  transition: transform 200ms;
-  $self: &;
-  display: flex;
-  flex-direction: column;
-  &__icon {
-    height: 1.5em;
-    transition: height 200ms;
-  }
-  &__label {
-    transform-origin: center top;
-
-    writing-mode: vertical-lr;
-
-    animation: dangling 1s;
-    &:link {
-      text-decoration: none;
-      color: var(--link);
-    }
-    &:visited {
-      color: var(--visited);
-    }
-    &::before {
-      content: "— ";
-    }
-  }
-  &:focus-within,
-  &:hover {
-    #{$self}__label {
-      text-decoration: underline;
-    }
-  }
-}
-
-.download-button {
-  background-color: var(--red);
-  padding: 0.6em;
-  border-radius: 0.3em;
-  font-size: 1.5em;
-  color: var(--foreground);
-  text-decoration: none;
-}
-
-.content-headline {
+.content-headline,
+.settings-headline {
   border-bottom: solid var(--yellow);
   width: max-content;
 }
 
-.paragraph {
-  margin-left: 1em;
-  // padding: 1em;
-  // background-color: var(--foreground);
-  // color: var(--background);
-  text-align: justify;
-  font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
-  // box-shadow: 0.5em -0.5em 0 0 var(--green);
-}
-
 .link {
-  &--perma {
-    color: inherit;
+  &:link {
     text-decoration: none;
-    &:hover {
-      text-decoration: underline;
+    color: var(--link);
+  }
+  &:visited {
+    color: var(--visited);
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+  &--perma {
+    &:link {
+      color: var(--foreground);
+    }
+    &:visited {
+      color: var(--foreground);
     }
   }
-}
-
-.hackor {
-  background-color: var(--code-background);
-  color: var(--code-foreground);
-  font-size: 1rem;
-  &--in-h2 {
-    font-size: 1.5rem;
-  }
-  &--in-h3 {
-    font-size: 1.17rem;
-  }
-  &__cyan {
-    color: var(--code-cyan);
-  }
-  &__violet {
-    color: var(--code-violet);
-  }
-  &__green {
-    color: var(--code-green);
-  }
-  &__red {
-    color: var(--code-orange);
-  }
-}
-
-.interests {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  padding: 0;
-  justify-content: flex-end;
-  margin-top: 2em;
-  &__item {
-    background-color: var(--foreground);
-    color: var(--background);
-    border-radius: 0.3em;
-    padding: 0.2em 0.5em;
-    margin: 0.2em;
-    font-size: 0.8em;
-    border: solid var(--foreground);
-  }
-}
-
-@keyframes dangling {
-  0% {
-    transform: rotate(-130deg);
-  }
-  10% {
-    transform: rotate(70deg);
-  }
-  20% {
-    transform: rotate(-40deg);
-  }
-  30% {
-    transform: rotate(20deg);
-  }
-  40% {
-    transform: rotate(5deg);
-  }
-  50% {
-    transform: rotate(-2deg);
-  }
-  60% {
-    transform: rotate(1deg);
-  }
-  70% {
-    transform: rotate(0.5deg);
-  }
-  80% {
-    transform: rotate(-0.25deg);
-  }
-  90% {
-    transform: rotate(0.1deg);
-  }
-  100% {
-    transform: rotate(0deg);
+  &--cta {
+    font-size: 2rem;
   }
 }

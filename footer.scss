@@ -1,0 +1,20 @@
+footer {
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.hackor {
+  background-color: var(--code-background);
+  color: var(--code-foreground);
+  font-size: 1.25rem;
+
+  &__yellow {
+    color: var(--code-yellow);
+  }
+  &__blue {
+    color: var(--code-blue);
+  }
+  &__green {
+    color: var(--code-green);
+  }
+}

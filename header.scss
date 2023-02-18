@@ -1,0 +1,131 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-picture {
+  position: relative;
+
+  background-image: var(--profile-picture-background-image);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  &__clip-image {
+    display: block;
+    box-sizing: border-box;
+    width: 239px;
+    height: 340px;
+    /* move out of the box */
+    padding-left: var(--clip-image-padding);
+    &--head {
+      background-color: var(--red);
+      clip-path: url(#head-path);
+    }
+    &--torso {
+      background-color: var(--green);
+      clip-path: url(#torso-path);
+
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &:hover {
+      /* show image on hover */
+      padding-left: 0;
+    }
+  }
+}
+
+.name {
+  margin-top: 1em;
+  padding-top: 0.6em;
+  border-top: solid;
+  border-color: var(--yellow);
+  width: 239px;
+  text-align: center;
+}
+
+.social-media-container {
+  list-style-type: none;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-around;
+
+  width: 100%;
+  max-width: 239px;
+}
+
+.social-media-entry {
+  transition: transform 200ms;
+  $self: &;
+  display: flex;
+  flex-direction: column;
+  &__icon {
+    height: 1.5em;
+    transition: height 200ms;
+  }
+  &__label {
+    transform-origin: center top;
+    writing-mode: vertical-lr;
+
+    animation: var(--social-media-animation);
+    &:link {
+      text-decoration: none;
+      color: var(--link);
+    }
+    &:visited {
+      color: var(--visited);
+    }
+    &::before {
+      content: "— ";
+      display: inline-block;
+    }
+  }
+  &:focus-within,
+  &:hover {
+    #{$self}__label {
+      text-decoration: underline;
+    }
+    #{$self}__icon {
+      transform: scale(var(--social-media-icon-hover-scale));
+    }
+  }
+}
+
+@keyframes dangling {
+  0% {
+    transform: rotate(-130deg);
+  }
+  10% {
+    transform: rotate(70deg);
+  }
+  20% {
+    transform: rotate(-40deg);
+  }
+  30% {
+    transform: rotate(20deg);
+  }
+  40% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  60% {
+    transform: rotate(1deg);
+  }
+  70% {
+    transform: rotate(0.5deg);
+  }
+  80% {
+    transform: rotate(-0.25deg);
+  }
+  90% {
+    transform: rotate(0.1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
