@@ -4,6 +4,7 @@
 @use "header";
 @use "main";
 @use "footer";
+@use "fonts";
 
 :root {
   @include colors.light;
@@ -50,7 +51,7 @@
 }
 
 body {
-  font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+  font-family: "Tinos", serif;
 
   background-color: var(--background);
   color: var(--foreground);
