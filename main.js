@@ -20,7 +20,6 @@ function initEventListeners() {
 }
 
 function initEventListener(groupIdentifier, option = "system") {
-  console.log(`${groupIdentifier}-switcher-option-${option}`);
   const radioButtonElement = document.getElementById(
     `${groupIdentifier}-switcher-option-${option}`
   );
