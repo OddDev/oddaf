@@ -1,35 +1,25 @@
 {
-  "name": "ungra.dev",
-  "version": "1.0.0",
-  "description": "Personal portfolio website of OddDev",
-  "browserlist": "defaults",
-  "source": "index.html",
+  "name": "oddaf",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/OddDev/oddaf.git"
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "15.1.2"
   },
-  "keywords": [
-    "personal",
-    "website",
-    "portfolio",
-    "odd",
-    "af"
-  ],
-  "author": "kai@ungra.dev",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/OddDev/oddaf/issues"
-  },
-  "homepage": "https://ungra.dev",
   "devDependencies": {
-    "@parcel/packager-raw-url": "^2.8.3",
-    "@parcel/transformer-jsonld": "^2.8.3",
-    "@parcel/transformer-sass": "^2.8.3",
-    "@parcel/transformer-webmanifest": "^2.8.3",
-    "parcel": "^2.8.3"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.2",
+    "@eslint/eslintrc": "^3"
   }
 }
