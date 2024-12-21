@@ -1,0 +1,6 @@
+.link {
+  background: var(--foreground);
+  color: var(--background);
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+}

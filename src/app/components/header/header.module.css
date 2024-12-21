@@ -1,0 +1,9 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  gap: 0.5rem;
+  align-items: center;
+  border-bottom: 1px solid;
+  padding-right: 0.5rem;
+}
