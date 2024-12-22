@@ -6,6 +6,6 @@ export default function Link({
   children: React.ReactNode;
 }>) {
   return (
-    <a className={styles.link}>{children}</a>
+    <a href="#" className={styles.link}>{children}</a>
   );
 }
