@@ -57,6 +57,10 @@ select {
   font: inherit;
 }
 
+button {
+  all: unset;
+}
+
 p,
 h1,
 h2,

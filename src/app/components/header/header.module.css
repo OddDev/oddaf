@@ -23,3 +23,49 @@
   flex: 1;
   overflow: scroll;
 }
+
+.radioGroupWrapper {
+  border: none;
+}
+
+.radioGroupLegend {
+  margin-bottom: 0.8rem;
+}
+
+.RadioGroupRoot {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.RadioGroupItemWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.RadioGroupItem {
+  background: transparent;
+  width: 0.7rem;
+  aspect-ratio: 1;
+  border: 1px solid;
+}
+
+.RadioGroupItem:hover {
+  background-color: var(--foreground);
+}
+
+.RadioGroupItem:focus {
+  outline: 1px solid currentColor;
+  outline-offset: 1px;
+}
+
+.RadioGroupIndicator {
+  width: 100%;
+  height: 100%;
+  background: currentColor;
+  display: block;
+}
+
+.Label {
+  font-weight: normal;
+}
