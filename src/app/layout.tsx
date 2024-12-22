@@ -20,6 +20,7 @@ const bpreplaySans = localFont({
 export const metadata: Metadata = {
   title: "Building Teams. With Heart.",
   description: "Odd portfolio website of Kai Klostermann",
+  // TODO add more metadata (especially icons and stuff) - compare also with old version of oddaf
 };
 
 export default function RootLayout({
