@@ -1,0 +1,45 @@
+.radioGroupWrapper {
+  border: none;
+}
+
+.radioGroupLegend {
+  margin-bottom: 0.8rem;
+}
+
+.radioGroupRoot {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.radioGroupItemWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.radioGroupItem {
+  background: transparent;
+  width: 0.7rem;
+  aspect-ratio: 1;
+  border: 1px solid;
+}
+
+.radioGroupItem:hover {
+  background-color: var(--foreground);
+}
+
+.radioGroupItem:focus {
+  outline: 1px solid currentColor;
+  outline-offset: 1px;
+}
+
+.radioGroupIndicator {
+  width: 100%;
+  height: 100%;
+  background: currentColor;
+  display: block;
+}
+
+.radioLabel {
+  font-weight: normal;
+}
