@@ -19,8 +19,10 @@ aside {
 
 .open {
   transform: translateX(0);
+
   .settings-toggle__icon {
     display: none;
+
     &--close {
       display: unset;
     }
@@ -40,14 +42,17 @@ aside {
   cursor: pointer;
   display: flex;
   justify-content: center;
+
   &__icon {
     height: 2em;
     padding-top: 1em;
     padding-bottom: 1em;
+
     &--close {
       display: none;
     }
   }
+
   @media (min-width: 1920px) {
     display: none;
   }
@@ -55,4 +60,10 @@ aside {
 
 .setting-controls {
   font-family: "Arimo", sans-serif;
+}
+
+.option {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
