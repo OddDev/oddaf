@@ -1,0 +1,45 @@
+input[type=radio] {
+  -webkit-appearance: none;
+  appearance: none;
+  // this is needed for iOS. Otherwise the background just becomes black.
+  background: #fff;
+  border: 1px solid #333;
+  height: 1.5em;
+  width: 1.5em;
+  display: inline-block;
+  vertical-align: text-bottom;
+  position: relative;
+
+  &[disabled],
+  &[aria-disabled=true] {
+    opacity: .4;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    top: 0;
+  }
+
+  &:focus {
+    outline: 2px solid;
+    outline-offset: 2px;
+  }
+
+  &::before {
+    height: 0;
+    width: 0;
+  }
+
+  &:checked::before {
+    border: 5px solid transparent;
+    border-radius: 100%;
+    outline-offset: -6px;
+    background: #000;
+  }
+}

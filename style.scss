@@ -5,9 +5,11 @@
 @use "main";
 @use "footer";
 @use "fonts";
+@use "radio-group";
 
 :root {
   @include colors.light;
+
   [for="theme-switcher-option-system"] {
     &::after {
       content: " (light)";
@@ -20,15 +22,18 @@
         content: " (dark)";
       }
     }
+
     [data-theme="system"] {
       @include colors.dark;
     }
   }
+
   [data-theme="dark"] {
     @include colors.dark;
   }
 
   @include motion.normal;
+
   [for="motion-switcher-option-system"] {
     &::after {
       content: " (normal)";
@@ -41,10 +46,12 @@
         content: " (reduced)";
       }
     }
+
     [data-motion="system"] {
       @include motion.reduced;
     }
   }
+
   [data-motion="reduced"] {
     @include motion.reduced;
   }
@@ -55,9 +62,7 @@ body {
 
   background-color: var(--background);
   color: var(--foreground);
-  padding-right: calc(
-    max((100% - 1920px) / 2, env(safe-area-inset-right), 2rem)
-  );
+  padding-right: calc(max((100% - 1920px) / 2, env(safe-area-inset-right), 2rem));
   padding-left: calc(max((100% - 1920px) / 2, env(safe-area-inset-left), 2rem));
 }
 
@@ -72,20 +77,25 @@ body {
     text-decoration: none;
     color: var(--link);
   }
+
   &:visited {
     color: var(--visited);
   }
+
   &:hover {
     text-decoration: underline;
   }
+
   &--perma {
     &:link {
       color: var(--foreground);
     }
+
     &:visited {
       color: var(--foreground);
     }
   }
+
   &--cta {
     font-size: 2rem;
   }
