@@ -3,6 +3,7 @@ input[type=radio] {
   appearance: none;
   // this is needed for iOS. Otherwise the background just becomes black.
   background: #fff;
+  border-radius: 0;
   border: 1px solid #333;
   height: 1.5em;
   width: 1.5em;
