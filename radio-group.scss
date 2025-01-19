@@ -6,10 +6,12 @@ input[type=radio] {
   border-radius: 0;
   border: 1px solid;
   height: 0.8em;
+  width: 0.8em;
   aspect-ratio: 1;
   display: inline-block;
   vertical-align: text-bottom;
   position: relative;
+  border-color: var(--foreground);
 
   &[disabled],
   &[aria-disabled=true] {
@@ -25,7 +27,7 @@ input[type=radio] {
   }
 
   &:focus {
-    outline: 1px solid currentColor;
+    outline: 1px solid var(--foreground);
     outline-offset: 1px;
   }
 
