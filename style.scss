@@ -7,6 +7,18 @@
 @use "fonts";
 @use "radio-group";
 
+// CSS Reset
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   @include colors.light;
 
@@ -57,13 +69,15 @@
   }
 }
 
+html {
+  font-size: 12px;
+}
+
 body {
-  font-family: "Tinos", serif;
+  font-family: "Ubuntu", sans-serif;
 
   background-color: var(--background);
   color: var(--foreground);
-  padding-right: calc(max((100% - 1920px) / 2, env(safe-area-inset-right), 2rem));
-  padding-left: calc(max((100% - 1920px) / 2, env(safe-area-inset-left), 2rem));
 }
 
 .content-headline,
@@ -74,12 +88,11 @@ body {
 
 .link {
   &:link {
-    text-decoration: none;
-    color: var(--link);
+    color: currentColor;
   }
 
   &:visited {
-    color: var(--visited);
+    color: currentColor;
   }
 
   &:hover {
@@ -97,6 +110,19 @@ body {
   }
 
   &--cta {
-    font-size: 2rem;
+    &:link {
+      text-decoration: none;
+      color: var(--background);
+      background-color: var(--foreground);
+      padding: 0.7rem 1.3rem;
+      font-size: 1.1rem;
+      margin-inline-start: 0.7rem;
+      margin-inline-end: 0.7rem;
+      align-self: center;
+    }
+
+    &::after {
+      content: " 🢣";
+    }
   }
 }

@@ -1,4 +1,6 @@
 aside {
+  // TODO: Remove 
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -62,8 +64,4 @@ aside {
   font-family: "Arimo", sans-serif;
 }
 
-.option {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
+

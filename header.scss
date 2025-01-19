@@ -1,7 +1,68 @@
 header {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  position: sticky;
+  gap: 0.5rem;
+  border-bottom: 1px solid;
+  align-items: stretch;
+  top: 0;
+
+  > :not(:last-child) {
+    border-right: 1px solid;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 0.5rem;
+  padding: 1.7rem 1.3rem;
+  font-size: 12px;
+  letter-spacing: -0.05em;
+  font-weight: 900;
+
+  &__asset {
+    height: 20px;
+  }
+
+  &__claim {
+    display: none;
+
+    @media(min-width: 769px) {
+      display: inline;
+    }
+  }
+}
+
+.banner {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 0.7rem;
+  overflow: scroll;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+
+  &__description {
+    font-weight: 900;
+    margin-bottom: 0.7rem;
+  }
+}
+
+.option-label {
+  margin-right: 0.5rem;
+  white-space: nowrap;
+}
+
+.cta {
+  align-self: center;
 }
 
 .profile-picture {
@@ -11,6 +72,7 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
   &__clip-image {
     display: block;
     box-sizing: border-box;
@@ -18,10 +80,12 @@ header {
     height: 340px;
     /* move out of the box */
     padding-left: var(--clip-image-padding);
+
     &--head {
       background-color: var(--red);
       clip-path: url(#head-path);
     }
+
     &--torso {
       background-color: var(--green);
       clip-path: url(#torso-path);
@@ -30,6 +94,7 @@ header {
       top: 0;
       left: 0;
     }
+
     &:hover {
       /* show image on hover */
       padding-left: 0;
@@ -62,32 +127,39 @@ header {
   $self: &;
   display: flex;
   flex-direction: column;
+
   &__icon {
     height: 1.5em;
     transition: height 200ms;
   }
+
   &__label {
     transform-origin: center top;
     writing-mode: vertical-lr;
 
     animation: var(--social-media-animation);
+
     &:link {
       text-decoration: none;
       color: var(--link);
     }
+
     &:visited {
       color: var(--visited);
     }
+
     &::before {
       content: "— ";
       display: inline-block;
     }
   }
+
   &:focus-within,
   &:hover {
     #{$self}__label {
       text-decoration: underline;
     }
+
     #{$self}__icon {
       transform: scale(var(--social-media-icon-hover-scale));
     }
@@ -98,33 +170,43 @@ header {
   0% {
     transform: rotate(-130deg);
   }
+
   10% {
     transform: rotate(70deg);
   }
+
   20% {
     transform: rotate(-40deg);
   }
+
   30% {
     transform: rotate(20deg);
   }
+
   40% {
     transform: rotate(5deg);
   }
+
   50% {
     transform: rotate(-2deg);
   }
+
   60% {
     transform: rotate(1deg);
   }
+
   70% {
     transform: rotate(0.5deg);
   }
+
   80% {
     transform: rotate(-0.25deg);
   }
+
   90% {
     transform: rotate(0.1deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
