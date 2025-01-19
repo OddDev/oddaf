@@ -118,11 +118,12 @@ body {
       font-size: 1.1rem;
       margin-inline-start: 0.7rem;
       margin-inline-end: 0.7rem;
-      align-self: center;
-    }
-
-    &::after {
-      content: " →";
+      display: flex;
+      gap: 0.5rem;
     }
   }
+}
+
+.cta__icon {
+  width: 1.3rem;
 }
