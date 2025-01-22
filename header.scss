@@ -65,52 +65,6 @@ header {
   align-self: center;
 }
 
-.profile-picture {
-  position: relative;
-
-  background-image: var(--profile-picture-background-image);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  &__clip-image {
-    display: block;
-    box-sizing: border-box;
-    width: 239px;
-    height: 340px;
-    /* move out of the box */
-    padding-left: var(--clip-image-padding);
-
-    &--head {
-      background-color: var(--red);
-      clip-path: url(#head-path);
-    }
-
-    &--torso {
-      background-color: var(--green);
-      clip-path: url(#torso-path);
-
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    &:hover {
-      /* show image on hover */
-      padding-left: 0;
-    }
-  }
-}
-
-.name {
-  margin-top: 1em;
-  padding-top: 0.6em;
-  border-top: solid;
-  border-color: var(--yellow);
-  width: 239px;
-  text-align: center;
-}
-
 .social-media-container {
   list-style-type: none;
   padding: 0;
