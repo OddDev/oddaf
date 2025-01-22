@@ -21,6 +21,7 @@
 
 :root {
   @include colors.light;
+  --profile-picture-background-image: url(/assets/background/background-light.svg);
 
   [for="theme-switcher-option-system"] {
     &::after {
@@ -37,11 +38,13 @@
 
     [data-theme="system"] {
       @include colors.dark;
+      --profile-picture-background-image: url(/assets/background/background-dark.svg);
     }
   }
 
   [data-theme="dark"] {
     @include colors.dark;
+    --profile-picture-background-image: url(/assets/background/background-dark.svg);
   }
 
   @include motion.normal;
