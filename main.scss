@@ -5,12 +5,49 @@ main {
   padding-right: calc(max(env(safe-area-inset-right), 2rem));
   padding-left: calc(max(env(safe-area-inset-left), 2rem));
   display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
 }
 
 .tile {
   border: solid 1px;
   padding: 2.5rem;
   background-color: var(--foreground);
+
+  &--transparent {
+    background: none;
+  }
+}
+
+.link-bar {
+  flex-basis: 100%;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+
+  &::before {
+    content: "";
+    border: 1px solid;
+    aspect-ratio: 1;
+    height: 0.8rem;
+  }
+
+  &::after {
+    content: "";
+    background: var(--foreground);
+    flex: 1;
+    height: 1px;
+  }
+}
+
+.badge {
+  padding: 0.125rem 0.25rem;
+  background: var(--foreground);
+  color: var(--background);
+  font-size: 0.9rem;
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
 }
 
 .profile-picture {
