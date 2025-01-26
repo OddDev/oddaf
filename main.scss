@@ -40,6 +40,11 @@ main {
   }
 }
 
+.link-icon {
+  aspect-ratio: 1;
+  height: 2.5rem;
+}
+
 .badge {
   padding: 0.125rem 0.25rem;
   background: var(--foreground);
