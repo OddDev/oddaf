@@ -20,39 +20,30 @@ main {
 }
 
 .link-bar {
-  flex-basis: 100%;
   display: flex;
-  gap: 0.25rem;
-  align-items: center;
+  flex-basis: 100%;
+  justify-content: space-between;
 
-  &::before {
-    content: "";
-    border: 1px solid;
-    aspect-ratio: 1;
-    height: 0.8rem;
+  @media(min-width: 769px) {
+    flex-direction: column;
+    flex-basis: auto;
+    justify-content: flex-start;
   }
+}
 
-  &::after {
-    content: "";
-    background: var(--foreground);
-    flex: 1;
-    height: 1px;
+.social-link {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media(min-width: 769px) {
+    flex-direction: row;
   }
 }
 
 .link-icon {
   aspect-ratio: 1;
-  height: 2.5rem;
-}
-
-.badge {
-  padding: 0.125rem 0.25rem;
-  background: var(--foreground);
-  color: var(--background);
-  font-size: 0.9rem;
-  display: flex;
-  gap: 0.2rem;
-  align-items: center;
+  height: 3rem;
 }
 
 .profile-picture {
