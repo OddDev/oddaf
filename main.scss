@@ -98,6 +98,22 @@ main {
   color: var(--background);
 }
 
+.card {
+  flex: 1;
+  color: var(--background);
+}
+
+.card-headline {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.card-content {
+  line-height: 1.5;
+  max-width: 65ch;
+  margin-block: 1lh;
+}
+
 .paragraph {
   margin-left: 1rem;
   text-align: justify;
