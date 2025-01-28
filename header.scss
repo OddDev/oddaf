@@ -6,6 +6,8 @@ header {
   border-bottom: 1px solid;
   align-items: stretch;
   top: 0;
+  background: var(--background);
+  z-index: 1;
 
   > :not(:last-child) {
     border-right: 1px solid;
@@ -64,4 +66,3 @@ header {
 .cta {
   align-self: center;
 }
-
