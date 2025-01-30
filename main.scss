@@ -139,7 +139,7 @@ main {
 }
 
 .bar {
-  width: 11rem;
+  flex-basis: 11rem;
   background: var(--foreground);
   display: flex;
   justify-content: stretch;
