@@ -117,8 +117,15 @@ main {
 }
 
 .card {
-  flex: 1;
   color: var(--background);
+
+  &--grow {
+    flex: 1;
+  }
+
+  &--transparent {
+    color: var(--foreground);
+  }
 }
 
 .card-headline {
