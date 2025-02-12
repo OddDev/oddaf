@@ -1,6 +1,6 @@
 const options = new Map();
 
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("DOMContentLoaded", function() {
   initEventListeners();
   initSettingsButton();
 });

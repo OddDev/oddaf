@@ -1,111 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <!-- Primary Meta Tags -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Odd Portfolio Website of Kai Klostermann</title>
-  <meta name="title" content="Odd Portfolio Website of Kai Klostermann" />
-  <meta name="description"
-    content="Bundled information about Kai Klostermann, a software engineer trying to conquer the magic behind side-projects. This is his portfolio website. Enjoy!" />
-  <meta name="keywords" content="Kai Klostermann, Kai, Klostermann, Front End,
-    Front, End, Engineer, Performance, side-projects, side, projects, pet,
-    pet-projects, pet projects, company culture, archery, LinkedIn Learning
-    Instructor, LinkedIn, Instructor" />
-  <meta name="author" content="Kai Klostermann" />
-  <!-- supports light and dark mode, defaults to light mode-->
-  <meta name="color-scheme" content="light dark" />
+<include src="./src/components/head.html">
+  {
+  "title": "OddDev - Building Teams. With Heart.",
+  "description": "Kai Klostermann's bureau for building teams. Find help to foster a collaborative and positive culture!
+  Let's build a team. With heart.",
+  "keywords": "Consultancy, Team, Positivity, Culture, Collaboration, Productive, Effective, Training, Instructor",
+  "image": "banner_kai_klostermann_odddev_website.png",
+  "schemaFile": "./src/schemas/index-schema.html"
+  }
+</include>
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ungra.dev/" />
-  <meta property="og:title" content="Odd Portfolio Website of Kai Klostermann" />
-  <meta property="og:description"
-    content="Bundled information about Kai Klostermann, a software engineer trying to conquer the magic behind side-projects. This is his portfolio website. Enjoy!" />
-  <meta property="og:image" content="https://assets.ungra.dev/meta.jpg" />
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://ungra.dev/" />
-  <meta property="twitter:title" content="Odd Portfolio Website of Kai Klostermann" />
-  <meta property="twitter:description"
-    content="Bundled information about Kai Klostermann, a software engineer trying to conquer the magic behind side-projects. This is his portfolio website. Enjoy!" />
-  <meta property="twitter:image" content="https://assets.ungra.dev/meta.jpg" />
-
-  <link rel="stylesheet" href="style.scss" />
-  <script src="main.js"></script>
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
-  <link rel="manifest" href="/manifest.webmanifest" />
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png" />
-  <meta name="theme-color" content="#ffffff" />
-  <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "email": "mailto:hey@ungra.dev",
-        "image": "./assets/profile-picture/kai_klostermann_but_annoyed.jpg",
-        "jobTitle": "Software Developer",
-        "name": "Kai Klostermann",
-        "url": "https://www.ungra.dev"
-      }
-    </script>
-</head>
-
-<body data-theme="system" data-motion="system">
-  <header>
-    <div class="logo">
-      <svg viewBox="0 0 100 100" class="logo__asset">
-        <use href="/assets/odd_logo_raw.svg#logo"></use>
-      </svg>
-      <span class="logo__claim">OddDev</span>
-    </div>
-    <section class="banner">
-      <fieldset class="option">
-        <legend class="option__description">
-          Theme Options
-        </legend>
-        <input type="radio" name="theme-switcher" id="theme-switcher-option-system" value="system" />
-        <label class="option-label" for="theme-switcher-option-system">System </label>
-        <input type="radio" name="theme-switcher" id="theme-switcher-option-light" value="light" />
-        <label class="option-label" for="theme-switcher-option-light">Light</label>
-        <input type="radio" name="theme-switcher" id="theme-switcher-option-dark" value="dark" />
-        <label class="option-label" for="theme-switcher-option-dark">Dark</label>
-      </fieldset>
-      <fieldset class="option">
-        <legend class="option__description">
-          Animations
-        </legend>
-        <input type="radio" name="motion-switcher" id="motion-switcher-option-system" value="system" />
-        <label class="option-label" for="motion-switcher-option-system">System</label>
-        <input type="radio" name="motion-switcher" id="motion-switcher-option-normal" value="normal" />
-        <label class="option-label" for="motion-switcher-option-normal">Normal</label>
-        <input type="radio" name="motion-switcher" id="motion-switcher-option-reduced" value="reduced" />
-        <label class="option-label" for="motion-switcher-option-reduced">Reduced</label>
-      </fieldset>
-    </section>
-    <div class="cta">
-      <a class="link link--cta" href="mailto:hey@ungra.dev">
-        <span>Message Me</span>
-        <svg class="cta__icon" viewBox="0 0 100 100">
-          <use href="/assets/icons/send.svg#send"></use>
-        </svg>
-      </a>
-    </div>
-  </header>
+<body>
+  <include src="./src/components/header.html"></include>
   <main>
     <section class="tile tile--transparent link-bar">
       <a class="link social-link" rel="noopener" target="_blank" href="https://github.com/OddDev">
@@ -121,7 +29,7 @@
         </svg>
         LinkedIn
       </a>
-      <a rel="noopener me" class="link social-link" target="_blank" href="https://floss.social/@odddev">
+      <a rel="noopener me" class="link social-link" target="_bindexlank" href="https://floss.social/@odddev">
         <svg class="link-icon" viewBox="0 0 100 100">
           <use href="/assets/icons/brand-mastodon.svg#brand-mastodon"></use>
         </svg>
@@ -203,105 +111,10 @@
       <p class="card-content">
         Also never hesitate to contact me with any question or special case you have. I'm here to help.
       </p>
-      <a class="link" href="#">Go to my Offers</a>
+      <a class="link" href="../service/service.html">Go to my Offers</a>
     </section>
-    <!-- <h3 class="content-headline" id="bio">
-      <a class="link link--perma" href="#bio" title="Permalink to Biography">
-        Bio
-      </a>
-    </h3>
-    <p class="paragraph">
-      Look who's found their way on my website! Welcome to a truly
-      <i>odd</i> world!
-    </p>
-    <p class="paragraph">
-      I'm mainly a developer for a Zalando company called "Tradebyte" in
-      Ansbach, Germany. I am Kai Klostermann and work primarily on the web
-      front end. Currently, SSR frameworks like Gatsby and Next.js keep me
-      busy. Generally, I'm profound in Design Systems and Web-Performance. I'm
-      trying to learn Rust and WASM. I joined tech in 2010, only to find my
-      profession as a software developer three years later.
-    </p>
-    <p class="paragraph">
-      When I'm not writing code, I enable people! I am getting more and more
-      into DevRel, speaking, writing, and teaching - for my employer, but also
-      LinkedIn Learning.
-    </p>
-    <p class="paragraph">
-      I organize the WebDevBBQ in Stuttgart together with
-      <a class="link social-link" href="https://activenode.de/">David Lorenz</a>. It's a
-      community of web-people gathering once in a while to present and discuss
-      the hottest topics. Find out more on our
-      <a class="link social-link" href="https://www.meetup.com/de-DE/web-dev-bbq-stuttgart/">meetup.com page</a>.
-    </p>
-    <p class="paragraph">
-      Besides letting arrows fly, I love mechanical keyboards and chess. I
-      cycle a lot and dislike car-centric-infrastructure and -culture.
-    </p>
-    <p class="paragraph">
-      Reach out to me anytime and keep your fingers crossed that my four
-      besties (👩🧒👶🐶) do not occupy me. 😸
-    </p>
-    <ul class="interests">
-      <li class="interests__item">🏹 Archery</li>
-      <li class="interests__item">⚡️ Performance</li>
-      <li class="interests__item">⌨️ Mechanical Keyboards</li>
-      <li class="interests__item">🐥 Front End</li>
-      <li class="interests__item">🎤 Speaking</li>
-      <li class="interests__item">👯 Company Culture</li>
-      <li class="interests__item">♟ Chess</li>
-      <li class="interests__item">🚲 Cycling</li>
-      <li class="interests__item">🦀 WASM/Rust</li>
-      <li class="interests__item">✒️ Writing</li>
-    </ul>
-<a href="./assets/vcard.vcf" class="download-button">Download vCard!</a> -->
   </main>
-  <footer>
-    <!-- <a class="link link--cta" href="mailto:hey@ungra.dev">Message Me!</a>
-    <br />
-    <code class="hackor hackor--cta"><span class="hackor__yellow">{</span><span class="hackor__green">...</span><span
-class="hackor__blue">love</span><span class="hackor__yellow">}</span></code> -->
-  </footer>
-  <aside>
-    <button class="settings-toggle" aria-label="Settings Button">
-      <svg class="settings-toggle__icon" viewBox="0 0 100 100">
-        <use href="/assets/icons/settings.svg#settings"></use>
-      </svg>
-      <svg class="settings-toggle__icon settings-toggle__icon--close" viewBox="0 0 100 100">
-        <use href="/assets/icons/caret-left.svg#caret-left"></use>
-      </svg>
-    </button>
-    <h2 class="settings-headline">Make it yours!</h2>
-    <section class="setting-controls">
-      <fieldset class="option">
-        <legend>
-          <h3>Choose an option</h3>
-        </legend>
-        <input type="radio" name="theme-switcher" id="theme-switcher-option-system" value="system" />
-        <label for="theme-switcher-option-system">System </label>
-        <br />
-        <input type="radio" name="theme-switcher" id="theme-switcher-option-light" value="light" />
-        <label for="theme-switcher-option-light">Light</label>
-        <br />
-        <input type="radio" name="theme-switcher" id="theme-switcher-option-dark" value="dark" />
-        <label for="theme-switcher-option-dark">Dark</label>
-      </fieldset>
-      <fieldset class="option">
-        <legend>
-          <h3>Animations</h3>
-        </legend>
-        <input type="radio" name="motion-switcher" id="motion-switcher-option-system" value="system" />
-        <label for="motion-switcher-option-system">System</label>
-        <br />
-        <input type="radio" name="motion-switcher" id="motion-switcher-option-normal" value="normal" />
-        <label for="motion-switcher-option-normal">Normal</label>
-        <br />
-        <input type="radio" name="motion-switcher" id="motion-switcher-option-reduced" value="reduced" />
-        <label for="motion-switcher-option-reduced">Reduced</label>
-      </fieldset>
-    </section>
-  </aside>
-  <!-- only contains clip-paths -->
+  <include src="./src/components/footer.html"></include>
   <svg aria-hidden="true" height="0" width="0">
     <defs>
       <clipPath id="head-path">
@@ -318,6 +131,5 @@ class="hackor__blue">love</span><span class="hackor__yellow">}</span></code> -->
       </clipPath>
     </defs>
   </svg>
-</body>
 
-</html>
+</body>

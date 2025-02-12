@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal portfolio website of OddDev",
   "browserlist": "defaults",
-  "source": "index.html",
+  "source": "src/pages/index/index.html",
   "scripts": {
     "start": "parcel",
     "build": "parcel build"
@@ -30,6 +30,7 @@
     "@parcel/transformer-jsonld": "^2.8.3",
     "@parcel/transformer-sass": "^2.8.3",
     "@parcel/transformer-webmanifest": "^2.8.3",
-    "parcel": "^2.8.3"
+    "parcel": "^2.8.3",
+    "posthtml-include": "^2.0.1"
   }
 }
