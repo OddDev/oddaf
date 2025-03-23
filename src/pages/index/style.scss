@@ -31,23 +31,7 @@
   }
 }
 
-.filler {
-  flex: 1;
-  padding: 0;
-  position: relative;
-  overflow: hidden;
 
-  @media(min-width: 622px) {
-    display: none;
-  }
-}
-
-.filler-ornament {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  transform: translateX(-50%);
-}
 
 .link-bar {
   display: flex;

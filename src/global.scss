@@ -25,12 +25,11 @@ ul {
     gap: 0.3rem;
 
     &::before {
-      content: "";
-      display: inline-block;
-      height: 1rem;
-      width: 1rem;
-      background: repeating-linear-gradient(90deg, transparent, transparent 1px, currentcolor 1px, currentcolor 2px);
-      border-radius: 100%;
+      content: "🔿";
+    }
+
+    &:not(:last-child) {
+      margin-block-end: 1lh;
     }
   }
 }
@@ -38,6 +37,8 @@ ul {
 @mixin dark {
   --background: #872728;
   --foreground: #f2f2bc;
+  // Better background
+  // --background: #7f383d;
 }
 
 @mixin light {
@@ -148,6 +149,36 @@ main {
   &--transparent {
     background: none;
   }
+
+  &--quote {
+    color: var(--background);
+    background-color: var(--background);
+    border-color: var(--foreground);
+    background-image: radial-gradient(circle, var(--foreground) 70%, transparent 120%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10rem;
+  }
+}
+
+.quote {
+  max-width: 24ch;
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.quote-author {
+  font-size: 1.3rem;
+  display: block;
+  margin-top: 0.7rem;
+  font-weight: 400;
+}
+
+.quote-text {
+  padding-inline-start: 1rem;
+  border-left: 1px solid;
+  display: inline-block;
 }
 
 .card {
@@ -167,8 +198,41 @@ main {
   font-weight: 900;
 }
 
+.card-subtitle {
+  font-size: 2rem;
+}
+
 .card-content {
   line-height: 1.5;
   max-width: 65ch;
   margin-block: 1lh;
+}
+
+.card-picture {
+  max-height: 400px;
+}
+
+.card-cta {
+  font-size: 1.1rem;
+  border: 1px solid;
+  padding: .7rem 1.3rem;
+  display: inline-block;
+}
+
+.filler {
+  flex: 1;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+
+  @media(min-width: 622px) {
+    display: none;
+  }
+}
+
+.filler-ornament {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transform: translateX(-50%);
 }
