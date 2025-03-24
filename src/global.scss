@@ -183,6 +183,7 @@ main {
 
 .card {
   color: var(--background);
+  font-size: 1.3rem;
 
   &--grow {
     flex: 1;
@@ -204,7 +205,7 @@ main {
 
 .card-content {
   line-height: 1.5;
-  max-width: 65ch;
+  max-width: 56ch;
   margin-block: 1lh;
 }
 
