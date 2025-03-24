@@ -21,3 +21,9 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Noto Sans Symbols";
+  src: url('./../../../assets/fonts/noto-symbols.otf');
+  unicode-range: U+1F53F, U+1F394, U+269F, U+263A, U+26AD;
+}
