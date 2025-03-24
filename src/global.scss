@@ -152,20 +152,27 @@ main {
 
   &--quote {
     color: var(--background);
-    background-color: var(--background);
     border-color: var(--foreground);
-    background-image: radial-gradient(circle, var(--foreground) 70%, transparent 120%);
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 10rem;
+    padding: 3rem;
+
+    @media (min-width: 420px) {
+      padding: 10rem;
+    }
   }
 }
 
 .quote {
   max-width: 24ch;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 900;
+  background: var(--foreground);
+
+  @media (min-width: 420px) {
+    font-size: 4rem;
+  }
 }
 
 .quote-author {
