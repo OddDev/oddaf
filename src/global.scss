@@ -35,10 +35,8 @@ ul {
 }
 
 @mixin dark {
-  --background: #872728;
+  --background: #7f383d;
   --foreground: #f2f2bc;
-  // Better background
-  // --background: #7f383d;
 }
 
 @mixin light {
