@@ -2,7 +2,6 @@ const options = new Map();
 
 window.addEventListener("DOMContentLoaded", function() {
   initEventListeners();
-  initSettingsButton();
 });
 
 const settings = new Map();
@@ -45,11 +44,3 @@ function setAttribute(name, value) {
   localStorage.setItem(name, value);
 }
 
-function initSettingsButton() {
-  const settingsButton = document.querySelector(".settings-toggle"),
-    settingsFlyIn = document.querySelector("aside");
-
-  settingsButton.addEventListener("click", () =>
-    settingsFlyIn.classList.toggle("open")
-  );
-}
