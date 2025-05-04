@@ -4,7 +4,7 @@
     url("./../../../assets/fonts/ubuntu-r-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -13,7 +13,7 @@
     url("./../../../assets/fonts/ubuntu-b-webfont.woff") format("woff");
   font-weight: 900;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -22,12 +22,12 @@
     url('./../../../assets/fonts/ubuntumono-r-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Noto Sans Symbols";
   src: url('./../../../assets/fonts/noto-symbols.otf');
   unicode-range: U+1F53F, U+1F394, U+269F, U+263A, U+26AD;
-  font-display: fallback;
+  font-display: swap;
 }
