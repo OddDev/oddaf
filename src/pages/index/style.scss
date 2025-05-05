@@ -1,0 +1,175 @@
+@use "./../../global";
+
+@mixin reduced {
+  --profile-picture-background-image: none;
+  --clip-image-padding: 0;
+}
+
+:root {
+  --profile-picture-background-image: url(/assets/background/background-light.svg);
+
+  @media (prefers-color-scheme: dark) {
+    [data-theme="system"] {
+      --profile-picture-background-image: url(/assets/background/background-dark.svg);
+    }
+  }
+
+  [data-theme="dark"] {
+    --profile-picture-background-image: url(/assets/background/background-dark.svg);
+  }
+
+  --clip-image-padding: 239px;
+
+  @media (prefers-reduced-motion) {
+    [data-motion="system"] {
+      @include reduced;
+    }
+  }
+
+  [data-motion="reduced"] {
+    @include reduced;
+  }
+}
+
+
+
+.link-bar {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+
+  @media(min-width: 769px) {
+    flex-direction: column;
+    flex-basis: auto;
+    justify-content: flex-start;
+  }
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media(min-width: 769px) {
+    flex-direction: row;
+  }
+}
+
+.link-icon {
+  aspect-ratio: 1;
+  height: 3rem;
+}
+
+.profile-picture {
+  position: relative;
+
+  background-image: var(--profile-picture-background-image);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__clip-image {
+    display: block;
+    box-sizing: border-box;
+    width: 239px;
+    height: 340px;
+    /* move out of the box */
+    padding-left: var(--clip-image-padding);
+
+    &--head {
+      background-color: var(--background);
+      clip-path: url(#head-path);
+      background: repeating-linear-gradient(45deg, transparent, transparent 5px, currentcolor 5px, currentcolor 6px);
+    }
+
+    &--torso {
+      background-color: var(--background);
+      background: repeating-linear-gradient(90deg, var(--background), var(--background), 5px, var(--foreground) 5px, var(--foreground) 6px);
+      clip-path: url(#torso-path);
+
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:hover {
+      /* show image on hover */
+      padding-left: 0;
+    }
+  }
+}
+
+.name {
+  color: var(--background);
+  margin-top: 1.2rem;
+  font-weight: normal;
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  color: var(--background);
+}
+
+.bar {
+  flex-basis: 11rem;
+  background: var(--foreground);
+  display: flex;
+  justify-content: stretch;
+  align-items: flex-end;
+
+  &--happy {
+    height: 100%;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 13%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      color: var(--background);
+      background: repeating-linear-gradient(-45deg, var(--foreground), var(--foreground), 5px, var(--background) 5px, var(--background) 6px);
+      border-bottom: 1px solid;
+    }
+  }
+
+  &--unhappy {
+    height: 87%;
+  }
+}
+
+.bar-legend {
+  font-family: "Ubuntu Mono";
+  flex: 1;
+  padding-top: 0.4rem;
+  background: var(--background);
+  text-align: center;
+}
+
+.diagram-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 1lh;
+}
+
+
+.diagram {
+  height: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.4rem;
+}
+
+.diagram-caption {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 65ch;
+
+  &--highlight {
+    font-weight: 900;
+  }
+}
